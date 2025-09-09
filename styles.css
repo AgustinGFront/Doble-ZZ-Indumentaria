@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-white{
+    font-family: 'Poppins', serif;
+    background-color: whitesmoke;
+}
+header{
+    background-color: #e1d4c4;
+}
+h1{
+    color: #702824;
+}
+p{
+    font-family: "Lato", sans-serif;
+}
+.mt-12{
+    background-color:#224cd680;
+    width: 100%;
+}
+.icon-footer{
+    font-size: 30px;
+}
+.Buscador{
+    font-size: 20px;
+    border-radius: 8px;
+}
+.footer-menu{
+    text-align: center;
+}
+.container-fluid{
+    box-sizing: border-box;
+    background-image:url(./assets/images/bg-inicio.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 2000px;
+}
+.bg-text{
+font-size: 100px;
+color: white;
+text-shadow:  -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 8px rgba(0,0,0,0.8);
+font-weight: 700;
+padding-top: 200px;
+  font-family: 'Roboto', serif;
+}
+.bg-subtittle{
+color: white;
+text-shadow:  -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 8px rgba(0,0,0,0.8);
+font-weight: 700;
+font-size: 20px;
+font-family:'Roboto', serif;
+}
