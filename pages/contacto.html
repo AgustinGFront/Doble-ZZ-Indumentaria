@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doble ZZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- HEADER -->
+    <header>
+<nav class="relative bg-blue-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      
+<!-- Botón Hamburguesa (Móvil) -->
+<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+  <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+    <span class="sr-only">Abrir menú</span>
+    <!-- Ícono hamburguesa -->
+    <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <!-- Ícono cerrar (se oculta con JS) -->  
+    <svg class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Logo + Menú -->
+<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+  <div class="flex shrink-0 items-center">
+    <img src="../assets/images/dvle.png" alt="Logo Doble ZZ" class="h-8 w-auto" />
+  </div>
+  <div class="hidden sm:ml-6 sm:block">
+    <div class="flex space-x-4">
+      <a href="../index.html" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
+      <a href="./productos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+      <a href="./quienesomos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+            <a href="./info.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+            <a href="./contacto.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lupa + Perfil -->
+<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
+  <input class="Buscador" type="text" placeholder="Buscar">
+  <!-- Lupa -->
+  <button class="p-1 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+    <span class="sr-only">Buscar</span>
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+    </svg>
+  </button>
+  <!-- Perfil -->
+</div>
+  <!-- Menú móvil desplegable -->
+  <div class="sm:hidden hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <a href="#" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Inicio</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+    </div>
+  </div>
+</nav>
+    </header>
+
+<!-- MAIN CONTENT -->
+<main>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Título Principal -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Contactanos</h1>
+            <p class="text-lg text-gray-600">Estamos para ayudarte. Completa el formulario y te responderemos a la brevedad.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Formulario de Contacto -->
+            <div class="bg-white rounded-lg shadow-md p-8 border border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h2>
+                
+                <form id="form-contacto" class="space-y-6">
+                    
+                    <!-- Nombre -->
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
+                            Nombre completo *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                            placeholder="Juan Pérez">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                            Email *
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                            placeholder="tu@email.com">
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div>
+                        <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">
+                            Teléfono *
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            name="telefono"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                            placeholder="+54 11 1234-5678"
+                            required>
+                    </div>
+
+                    <!-- Asunto -->
+                    <div>
+                        <label for="asunto" class="block text-sm font-medium text-gray-700 mb-2">
+                            Asunto *
+                        </label>
+                        <select 
+                            id="asunto" 
+                            name="asunto" 
+                            required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta sobre productos</option>
+                            <option value="pedido">Estado de mi pedido</option>
+                            <option value="cambio">Cambios y devoluciones</option>
+                            <option value="mayorista">Compra mayorista</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div>
+                        <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">
+                            Mensaje *
+                        </label>
+                        <textarea 
+                            id="mensaje" 
+                            name="mensaje" 
+                            rows="5" 
+                            required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent resize-none"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <!-- Botón Submit -->
+                    <button 
+                        type="submit"
+                        class="w-full bg-blue-800/50 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                        Enviar Mensaje
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- Información de Contacto -->
+            <div class="space-y-8">
+                
+                <!-- Datos de Contacto -->
+                <div class="bg-white rounded-lg shadow-md p-8 border border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Información de contacto</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Dirección -->
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-800 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">Dirección</p>
+                                <p class="text-gray-600">Berazategui, Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-800 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">Email</p>
+                                <p class="text-gray-600">Gomezzapatajulian03@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-800 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">Teléfono / WhatsApp</p>
+                                <p class="text-gray-600">+54 11 5338-1884</p>
+                            </div>
+                        </div>
+
+                        <!-- Horario -->
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-800 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">Horario de atención</p>
+                                <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                                <p class="text-gray-600">Sábados: 10:00 - 14:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="bg-white rounded-lg shadow-md p-8 border border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Síguenos en redes</h2>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/doblezz_10?igsh=MnY4c21hMXY4MmJm&utm_source=qr" target="_blank" class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full flex items-center justify-center text-white hover:opacity-80 transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@doblezz_10?_t=ZM-8zX5tKaIrrU&_r=1" target="_blank" class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white hover:opacity-80 transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!" target="_blank" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+    <!-- FOOTER -->
+    <footer class="mt-12">
+        <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <!-- Columna izquierda -->
+                <div class="space-y-8">
+                    <img src="../assets/images/dvle.png" alt="Logo" class="h-13">
+                    <p class="text-b leading-6 text-white">
+                        Ropa de potrero, corazón de cancha
+                    </p>
+                    <div class="flex space-x-6">
+                        <!-- redes -->
+                        <a href="https://www.instagram.com/doblezz_10?igsh=MnY4c21hMXY4MmJm&utm_source=qr"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@doblezz_10?_t=ZM-8zX5tKaIrrU&_r=1"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Columnas de links -->
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid footer-menu md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6">Menu</h3>
+              <ul class="mt-6 space-y-4">
+                                <li><a href="../index.html" class="text-sm leading-6 hover:text-white">Inicio</a>
+                                </li>
+                                <li><a href="./productos.html" class="text-sm leading-6  hover:text-white">Productos</a>
+                                </li>
+                                <li><a href="./quienesomos.html" class="text-sm leading-6  hover:text-white">Quienes Somos</a>
+                                </li>
+                                <li><a href="./info.html" class="text-sm leading-6  hover:text-white">Info</a>
+                                </li>
+                                <li><a href="./contacto.html" class="text-sm leading-6  hover:text-white">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-black">Company</h3>
+                            <ul class="mt-6 space-y-4">
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">About</a></li>
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">Blog</a></li>
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">Jobs</a></li>
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">Press</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-black">Contactános</h3>
+                            <ul class="mt-6 space-y-4">
+                                
+                                <li> <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                            class="text-sm leading-6 text-black hover:text-white" hover:text-gray-300" target="_blank">+54 11 5338-1884</li>
+                                <li><a href="#" class="text-sm leading-6 text-black hover:text-white">Gomezzapatajulian03@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-black pt-8">
+                <p class="text-sm leading-5 text-white">&copy; 2025 Doble zz, Todos los  derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

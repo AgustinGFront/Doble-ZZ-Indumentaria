@@ -18,7 +18,7 @@
 
 <body class="bg-white text-black">
   <!-- HEADER -->
-  <header>
+  <header id="subir">
     <nav
       class="relative bg-blue-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -48,15 +48,11 @@
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
-                <a href="../index.html"
-                  class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
-                <a href="../pages/productos.html"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
-                <a href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes
-                  Somos</a>
-                <a href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+      <a href="../index.html" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
+      <a href="./productos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+      <a href="./quienesomos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+            <a href="./info.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+            <a href="./contacto.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
               </div>
             </div>
           </div>
@@ -93,7 +89,7 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main>
+<main>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <h2 class="text-3xl font-bold mb-8 text-center">Nuestros Productos</h2>
       <h5 class="text-2xl font-bold mb-8 text-center text-black">Primera Division</h5>
@@ -102,8 +98,12 @@
 
         <!-- Producto 1 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Boca1.jpeg" alt="camiseta_cabj"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca1.jpeg" alt="camiseta_cabj"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca2.jpeg" 
+              alt="camiseta_cabj_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
@@ -116,8 +116,12 @@
         </div>
         <!-- Producto 2 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Boca_ML.jpeg" alt="camiseta_cabj4"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca_ML.jpeg" alt="camiseta_cabj4"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca_ML2.jpeg" 
+              alt="camiseta_cabj4_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
@@ -132,8 +136,12 @@
 
         <!-- Producto 2 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Boca_quilmes.jpeg" alt="camiseta_cabj2"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca_quilmes.jpeg" alt="camiseta_cabj2"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca_quilmes2.jpeg" 
+              alt="camiseta_cabj2_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
@@ -146,8 +154,12 @@
         </div>
         <!-- Producto 2 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Boca_azul.jpeg" alt="camiseta_cabj3"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca_azul.jpeg" alt="camiseta_cabj3"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Boca_azul2.jpeg" 
+              alt="camiseta_cabj3_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
@@ -160,8 +172,12 @@
         </div>
         <!-- Producto 2 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/River_Ml.jpeg" alt="camiseta_carp2"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/River_Ml.jpeg" alt="camiseta_carp2"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/River_ML2.jpeg" 
+              alt="camiseta_carp2_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
@@ -174,8 +190,12 @@
         </div>
         <!-- Producto 3 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/River.jpeg" alt="camiseta_carp"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/River.jpeg" alt="camiseta_carp"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/River2.jpeg" 
+              alt="camiseta_carp_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
@@ -187,8 +207,12 @@
           </div>
         </div>
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/River_blanca.jpeg" alt="camiseta_carp3"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/River_blanca.jpeg" alt="camiseta_carp3"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/River_blanca2.jpeg" 
+              alt="camiseta_carp3_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
@@ -202,8 +226,12 @@
 
         <!-- Producto 3 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/River1.jpeg" alt="camiseta_carp1"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/River1.jpeg" alt="camiseta_carp1"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/River2.jpeg" 
+              alt="camiseta_carp1_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
@@ -217,8 +245,12 @@
 
         <!-- Producto 4 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Independiente2.jpeg" alt="camiseta_cai"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Independiente2.jpeg" alt="camiseta_cai"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Independiente1.jpeg" 
+              alt="camiseta_cai_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Independiente</h3>
@@ -232,8 +264,12 @@
 
         <!-- Producto 5 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Central1.jpeg" alt="camiseta_carc"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Central1.jpeg" alt="camiseta_carc"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Central2.jpeg" 
+              alt="camiseta_carc_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Rosario Central</h3>
@@ -247,8 +283,12 @@
 
         <!-- Producto 6 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Central_alternativa.jpeg" alt="camiseta_carc2"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Central_alternativa.jpeg" alt="camiseta_carc2"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Central_alternativa2.jpeg" 
+              alt="camiseta_carc2_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Rosario Central</h3>
@@ -262,8 +302,12 @@
 
         <!-- Producto 7 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba.jpeg" alt="camiseta_cacc"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba.jpeg" alt="camiseta_cacc"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba2.jpeg" 
+              alt="camiseta_cacc_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Central Cordoba</h3>
@@ -275,8 +319,12 @@
           </div>
         </div>
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba_mangalarga.jpeg"
-            alt="camiseta_cacc2" class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba_mangalarga.jpeg"
+              alt="camiseta_cacc2" class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba_mangalarga2.jpeg" 
+              alt="camiseta_cacc2_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Central Cordoba</h3>
@@ -290,8 +338,12 @@
 
         <!-- Producto 8 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Defensa_y_justicia 2 (2).jpeg"
-            alt="camiseta_dyj" class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Defensa_y_justicia 2 (2).jpeg"
+              alt="camiseta_dyj" class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Defensa_y_justicia 2 (1).jpeg" 
+              alt="camiseta_dyj_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Defensa y Justicia</h3>
@@ -305,8 +357,12 @@
 
         <!-- Producto 9 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Talleres.jpeg" alt="camiseta_cat"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Talleres.jpeg" alt="camiseta_cat"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Talleres2.jpeg" 
+              alt="camiseta_cat_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Talleres</h3>
@@ -320,8 +376,12 @@
 
         <!-- Producto 10 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Banfield.jpeg" alt="camiseta_cab"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Banfield.jpeg" alt="camiseta_cab"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Banfield2.jpeg" 
+              alt="camiseta_cab_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Banfield</h3>
@@ -334,8 +394,12 @@
         </div>
         <!-- Producto 11 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Primera division/Gimnasia1.jpeg" alt="camiseta_gimnasia_lp"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Primera division/Gimnasia1.jpeg" alt="camiseta_gimnasia_lp"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Primera division/Gimnasia2.jpegs" 
+              alt="camiseta_gimnasia_lp_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Gimnasia</h3>
@@ -354,8 +418,12 @@
 
         <!-- Producto 1 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Quilmes1.jpeg" alt="camiseta_qac"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Quilmes1.jpeg" alt="camiseta_qac"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Quilmes2.jpeg" 
+              alt="camiseta_qac_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Quilmes</h3>
@@ -368,8 +436,12 @@
         </div>
         <!-- Producto 2 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Sacachispas.jpeg" alt="camiseta_sacachispas"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Sacachispas.jpeg" alt="camiseta_sacachispas"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Sacachispas2.jpeg" 
+              alt="camiseta_sacachispas_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Sacachispas</h3>
@@ -383,8 +455,12 @@
 
         <!-- Producto 3 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Laferrerre1.jpeg" alt="camiseta_laferrere"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Laferrerre1.jpeg" alt="camiseta_laferrere"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Laferrere2.jpeg" 
+              alt="camiseta_laferrere_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Laferrere</h3>
@@ -397,8 +473,12 @@
         </div>
          <!-- Producto 3 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Laferreree.jpeg" alt="camiseta_laferrere2"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Laferreree.jpeg" alt="camiseta_laferrere2"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Laferreree2.jpeg" 
+              alt="camiseta_laferrere2_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Laferrere</h3>
@@ -411,8 +491,12 @@
         </div>
         <!-- Producto 4 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Centralnorte.jpeg" alt="camiseta_central_norte"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Centralnorte.jpeg" alt="camiseta_central_norte"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Centralnorte2.jpeg" 
+              alt="camiseta_central_norte_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Central Norte</h3>
@@ -425,8 +509,12 @@
         </div>
         <!-- Producto 5 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Claypole1.jpeg" alt="camiseta_claypole"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Claypole1.jpeg" alt="camiseta_claypole"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Claypole2.jpeg" 
+              alt="camiseta_claypole_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Claypole</h3>
@@ -439,8 +527,12 @@
         </div>
          <!-- Producto 1 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Ascenso/Chacoforever (1).jpeg" alt="camiseta_Cfe"
-            class="w-full h-50 object-cover">
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Ascenso/Chacoforever (1).jpeg" alt="camiseta_Cfe"
+              class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Ascenso/Chacoforever (2).jpeg" 
+              alt="camiseta_Cfe_trasera" class="imagen-hover">
+          </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Chaco For Ever</h3>
@@ -451,470 +543,14 @@
             </button>
           </div>
         </div>
-      </div>
-      <hr class="border-t-4 border-black my-8">
-      <h5 class="text-2xl font-bold mb-8 text-center text-black">Selecciones</h5>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Producto 1 -->
+        <!-- Producto 2 - Chacarita Manga Larga -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Alemania1.jpeg" alt="camiseta_Alemaniia"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Alemania</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
+          <div class="imagen-container">
+            <img src="../assets/images/Productos doble zz/Manga larga/Chacarita_mangalarga.jpeg"
+              alt="camiseta_chacarita_mangalarga" class="imagen-principal w-full h-50 object-cover">
+            <img src="../assets/images/Productos doble zz/Manga larga/Chacarita_mangalarga.jpeg" 
+              alt="camiseta_chacarita_mangalarga_trasera" class="imagen-hover">
           </div>
-        </div>
-        <!-- Producto 2 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Alemania_2010.jpeg" alt="camiseta_Alemania2"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Alemania</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 3 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul-riquelme.jpeg" alt="camiseta_Argentina_2006"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 3 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul1.jpeg" alt="camiseta_Argentina_Azul"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 4 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Argentina_blanca1.jpeg" alt="camiseta_Argentina2"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 5 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Francia.jpeg" alt="camiseta_Francia"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Francia</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Selecciones/Brasil.jpeg" alt="camiseta_Br_mangalarga"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Camiseta Manga Larga Brasil</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-      </div>
-      <hr class="border-t-4 border-black my-8">
-      <h5 class="text-2xl font-bold mb-8 text-center text-black">Sudamerica</h5>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense.jpeg" alt="camiseta_Fluminense"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Fluminense</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Sudamerica/Palmeiras_musculosa.jpeg" alt="camiseta_Palmeiras"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Palmeiras</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 2 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Sudamerica/Flamengo_musculosa.jpeg" alt="camiseta_Flamengo"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Flamengo</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense_musculosa.jpeg" alt="camiseta_Fluminense2"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Fluminense</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-
-      </div>
-      <hr class="border-t-4 border-black my-8">
-      <h5 class="text-2xl font-bold mb-8 text-center text-black">Europa</h5>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Real_Madrid.jpeg" alt="camiseta_Real_madrid"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Real Madrid</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Real_azul.jpeg" alt="camiseta_Real_madrid_azul "
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Real Madrid</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 2 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Barcelona_ML2.jpeg" alt="camiseta_Barcelona_Manga_larga"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Barcelona</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 3 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Barcelona.jpeg" alt="camiseta_Barcelona"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Barcelona</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 4 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Atletico.jpeg" alt="camiseta_Atletico_madrid"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Atletico Madrid</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Inter_mangalarga.jpeg" alt="camiseta_Inter_milan"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Inter De Milan</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Milan2.jpeg" alt="camiseta_Milan"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Milan</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Milan_blanca1.jpeg" alt="camiseta_Milan_blanca"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Milan</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Milann1.jpeg" alt="camiseta_Milan2"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Milan</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Napoli.jpeg" alt="camiseta_Napoli"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Napoli</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Europa/Liverpool (1).jpeg" alt="camiseta_Liverpool"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Liverpool</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-      <hr class="border-t-4 border-black my-8">
-      <h5 class="text-2xl font-bold mb-8 text-center text-black">Influencers</h5>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/Fiorito_1.jpeg" alt="camiseta_LPDF"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/LPDF-Musculosa.jpeg" alt="camiseta_LPDF_musculosa"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/LPDF_Ml (1).jpeg" alt="camiseta_LPDF_ml"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 2 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_1.jpeg" alt="camiseta_Team_balanza"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Team Balanza</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 2 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_musculosa.jpeg" alt="camiseta_Team_balanza_musculosa"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Team Balanza</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/Team_nene2.jpeg" alt="camiseta_team_nene"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/Team_nene_ML (1).jpeg" alt="camiseta_team_nene_ml"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto Team Nene</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/MDS_musculosa.jpeg" alt="camiseta_MDS"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto MDS</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-         <!-- Producto 1 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Influencers/MDS_ML (1).jpeg" alt="camiseta_MDS_ML"
-            class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Conjunto MDS</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
-      </div>
-      <hr class="border-t-4 border-black my-8">
-      <h5 class="text-2xl font-bold mb-8 text-center text-black">Manga Larga</h5>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Producto 2 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Manga larga/Chacarita_mangalarga.jpeg"
-            alt="camiseta_chacarita_mangalarga" class="w-full h-50 object-cover">
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Camiseta Manga Larga Chacarita</h3>
@@ -925,27 +561,605 @@
             </button>
           </div>
         </div>
-        <!-- Producto 3 -->
-        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
-          <img src="../assets/images/Productos doble zz/Manga larga/Quilmes_mangalarga1.jpeg"
-            alt="camiseta_quilmes_mangalarga" class="w-full h-50 object-cover">
-          <div class="p-4 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-semibold">Camiseta Manga Larga Quilmes</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
-            </div>
-            <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
-              Comprar
-            </button>
-          </div>
-        </div>
+        <!-- Producto 3 - Quilmes Manga Larga -->
+<div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+  <div class="imagen-container">
+    <img src="../assets/images/Productos doble zz/Manga larga/Quilmes_mangalarga1.jpeg"
+      alt="camiseta_quilmes_mangalarga" class="imagen-principal w-full h-50 object-cover">
+    <img src="../assets/images/Productos doble zz/Manga larga/Quilmes_mangalarga2.jpeg" 
+      alt="camiseta_quilmes_mangalarga_trasera" class="imagen-hover">
+  </div>
+  <div class="p-4 flex flex-col flex-1 justify-between">
+    <div>
+      <h3 class="text-lg font-semibold">Camiseta Manga Larga Quilmes</h3>
+      <p class="text-gray-600 mt-2">$15.000</p>
+    </div>
+    <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+      Comprar
+    </button>
+  </div>
+</div>
+</div>
+<hr class="border-t-4 border-black my-8">
+<h5 class="text-2xl font-bold mb-8 text-center text-black">Selecciones</h5>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <!-- Producto 1 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Alemania1.jpeg" alt="camiseta_Alemaniia"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Alemania2.jpeg" 
+        alt="camiseta_Alemaniia_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Alemania</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
       </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 2 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Alemania_2010.jpeg" alt="camiseta_Alemania2"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Alemania_2010_2.jpeg" 
+        alt="camiseta_Alemania2_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Alemania</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 3 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul_riquelme.jpeg" alt="camiseta_Argentina_2006"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul-riquelme.jpeg" 
+        alt="camiseta_Argentina_2006_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Mangalarga Argentina</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 4 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul2.jpeg" alt="camiseta_Argentina_Azul"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul1.jpeg" 
+        alt="camiseta_Argentina_Azul_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 5 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Argentina_blanca1.jpeg" alt="camiseta_Argentina2"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Argentina_blanca2.jpeg" 
+        alt="camiseta_Argentina2_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 6 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Francia.jpeg" alt="camiseta_Francia"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Francia2.jpeg" 
+        alt="camiseta_Francia_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Francia</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 7 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Selecciones/Brasil.jpeg" alt="camiseta_Br_mangalarga"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Selecciones/Brasil2.jpeg" 
+        alt="camiseta_Br_mangalarga_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Camiseta Manga Larga Brasil</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+</div>
+<hr class="border-t-4 border-black my-8">
+<h5 class="text-2xl font-bold mb-8 text-center text-black">Sudamerica</h5>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <!-- Producto 1 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense.jpeg" alt="camiseta_Fluminense"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense2.jpeg" 
+        alt="camiseta_Fluminense_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Fluminense</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 2 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Palmeiras_musculosa.jpeg" alt="camiseta_Palmeiras"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Palmeiras_musculosa2.jpeg" 
+        alt="camiseta_Palmeiras_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Palmeiras</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 3 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Flamengo_musculosa.jpeg" alt="camiseta_Flamengo"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Flamengo_musculosa2.jpeg" 
+        alt="camiseta_Flamengo_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Flamengo</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 4 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense_musculosa.jpeg" alt="camiseta_Fluminense2"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense_musculosa2.jpeg" 
+        alt="camiseta_Fluminense2_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Fluminense</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+
+</div>
+<hr class="border-t-4 border-black my-8">
+<h5 class="text-2xl font-bold mb-8 text-center text-black">Europa</h5>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <!-- Producto 1 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Real_Madrid.jpeg" alt="camiseta_Real_madrid"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Real_Madrid2.jpeg" 
+        alt="camiseta_Real_madrid_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Real Madrid</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+   <!-- Producto 2 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Real_azul.jpeg" alt="camiseta_Real_madrid_azul "
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Real_azul2.jpeg" 
+        alt="camiseta_Real_madrid_azul_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Real Madrid</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 3 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Barcelona_ML2.jpeg" alt="camiseta_Barcelona_Manga_larga"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Barcelona_ML.jpeg" 
+        alt="camiseta_Barcelona_Manga_larga_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Barcelona</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 4 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Barcelona.jpeg" alt="camiseta_Barcelona"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Barcelona2.jpeg" 
+        alt="camiseta_Barcelona_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Barcelona</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 5 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Atletico.jpeg" alt="camiseta_Atletico_madrid"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Atletico2.jpeg" 
+        alt="camiseta_Atletico_madrid_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Atletico Madrid</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 6 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Inter_mangalarga.jpeg" alt="camiseta_Inter_milan"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Inter_mangalarga2.jpeg" 
+        alt="camiseta_Inter_milan_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Inter De Milan</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 7 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Milan2.jpeg" alt="camiseta_Milan"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Milan.jpeg" 
+        alt="camiseta_Milan_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Milan</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+   <!-- Producto 8 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Milan_blanca1.jpeg" alt="camiseta_Milan_blanca"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Milan_blanca2.jpeg" 
+        alt="camiseta_Milan_blanca_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Milan</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+   <!-- Producto 9 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Milann1.jpeg" alt="camiseta_Milan2"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Milann2.jpeg" 
+        alt="camiseta_Milan2_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Milan</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+   <!-- Producto 10 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Napoli.jpeg" alt="camiseta_Napoli"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Napoli2.jpeg" 
+        alt="camiseta_Napoli_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Napoli</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+   <!-- Producto 11 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Europa/Liverpool (1).jpeg" alt="camiseta_Liverpool"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Europa/Liverpool (2).jpeg" 
+        alt="camiseta_Liverpool_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Liverpool</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+</div>
 
 
+<!-- ACAA -->
 
 
-
-
+     <hr class="border-t-4 border-black my-8">
+<h5 class="text-2xl font-bold mb-8 text-center text-black">Influencers</h5>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <!-- Producto 1 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/Fiorito_1.jpeg" alt="camiseta_LPDF"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/Fiorito_2.jpeg" 
+        alt="camiseta_LPDF_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 2 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/LPDF-Musculosa.jpeg" alt="camiseta_LPDF_musculosa"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/LPDF-Musculosa2.jpeg" 
+        alt="camiseta_LPDF_musculosa_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 3 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/LPDF_Ml (1).jpeg" alt="camiseta_LPDF_ml"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/LPDF_Ml (2).jpeg" 
+        alt="camiseta_LPDF_ml_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 4 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_1.jpeg" alt="camiseta_Team_balanza"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_2.jpeg" 
+        alt="camiseta_Team_balanza_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Team Balanza</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 5 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_musculosa.jpeg" alt="camiseta_Team_balanza_musculosa"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_musculosa (2).jpeg" 
+        alt="camiseta_Team_balanza_musculosa_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Team Balanza</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 6 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_nene2.jpeg" alt="camiseta_team_nene"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/team_nene.jpeg" 
+        alt="camiseta_team_nene_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Team Nene</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 7 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_nene_ML (1).jpeg" alt="camiseta_team_nene_ml"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/Team_nene_ML (2).jpeg" 
+        alt="camiseta_team_nene_ml_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto Team Nene</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 8 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/MDS_musculosa.jpeg" alt="camiseta_MDS"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/MDS_musculosa2.jpeg" 
+        alt="camiseta_MDS_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto MDS</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+  <!-- Producto 9 -->
+  <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
+    <div class="imagen-container">
+      <img src="../assets/images/Productos doble zz/Influencers/MDS_ML (2).jpeg" alt="camiseta_MDS_ML"
+        class="imagen-principal w-full h-50 object-cover">
+      <img src="../assets/images/Productos doble zz/Influencers/MDS_ML (1).jpeg" 
+        alt="camiseta_MDS_ML_trasera" class="imagen-hover">
+    </div>
+    <div class="p-4 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 class="text-lg font-semibold">Conjunto MDS</h3>
+        <p class="text-gray-600 mt-2">$15.000</p>
+      </div>
+      <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
+        Comprar
+      </button>
+    </div>
+  </div>
+</div>
   </main>
   <!-- FOOTER -->
   <footer class="mt-12">
@@ -973,17 +1187,17 @@
             <div>
               <h3 class="text-sm font-semibold leading-6">Menu</h3>
               <ul class="mt-6 space-y-4">
-                <li><a href="../pages/productos.html" class="text-sm leading-6  hover:text-white">Productos</a>
-                </li>
-                <li><a href="#" class="text-sm leading-6  hover:text-white">Analytics</a>
-                </li>
-                <li><a href="#" class="text-sm leading-6  hover:text-white">Automation</a>
-                </li>
-                <li><a href="#" class="text-sm leading-6  hover:text-white">Commerce</a>
-                </li>
-                <li><a href="#" class="text-sm leading-6 hover:text-white">Insights</a>
-                </li>
-              </ul>
+                                <li><a href="../index.html" class="text-sm leading-6 hover:text-white">Inicio</a>
+                                </li>
+                                <li><a href="./productos.html" class="text-sm leading-6  hover:text-white">Productos</a>
+                                </li>
+                                <li><a href="./quienesomos.html" class="text-sm leading-6  hover:text-white">Quienes Somos</a>
+                                </li>
+                                <li><a href="./info.html" class="text-sm leading-6  hover:text-white">Info</a>
+                                </li>
+                                <li><a href="./contacto.html" class="text-sm leading-6  hover:text-white">Contacto</a>
+                                </li>
+                            </ul>
             </div>
 
           </div>
@@ -1019,7 +1233,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>

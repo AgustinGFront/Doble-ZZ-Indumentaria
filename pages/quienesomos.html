@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doble ZZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- HEADER -->
+    <header>
+<nav class="relative bg-blue-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      
+<!-- Botón Hamburguesa (Móvil) -->
+<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+  <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+    <span class="sr-only">Abrir menú</span>
+    <!-- Ícono hamburguesa -->
+    <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <!-- Ícono cerrar (se oculta con JS) -->  
+    <svg class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Logo + Menú -->
+<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+  <div class="flex shrink-0 items-center">
+    <img src="../assets/images/dvle.png" alt="Logo Doble ZZ" class="h-8 w-auto" />
+  </div>
+  <div class="hidden sm:ml-6 sm:block">
+    <div class="flex space-x-4">
+      <a href="../index.html" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
+      <a href="./productos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+      <a href="./quienesomos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+            <a href="./info.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+            <a href="./contacto.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lupa + Perfil -->
+<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
+  <input class="Buscador" type="text" placeholder="Buscar">
+  <!-- Lupa -->
+  <button class="p-1 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+    <span class="sr-only">Buscar</span>
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+    </svg>
+  </button>
+  <!-- Perfil -->
+</div>
+  <!-- Menú móvil desplegable -->
+  <div class="sm:hidden hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <a href="../index.html" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
+      <a href="./productos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+      <a href="./quienesomos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+            <a href="./info.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+            <a href="./contacto.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+    </div>
+  </div>
+</nav>
+    </header>
+
+<!-- MAIN CONTENT -->
+<!-- MAIN CONTENT -->
+<main>
+    <!-- HERO SECTION -->
+    <section class="relative py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight text-gray-900">
+                Somos <span class="bg-gradient-to-r from-blue-800 to-purple-600 bg-clip-text text-transparent">Doble ZZ</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
+                Lo que empezó como un emprendimiento para jugar a la pelota, hoy viste a cientos de jugadores   
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats simples -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="text-center p-6">
+                    <div class="text-5xl font-black text-blue-800 mb-2">2022</div>
+                    <div class="text-gray-700 font-semibold">Año de inicio</div>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-5xl font-black text-purple-800 mb-2">3 años</div>
+                    <div class="text-gray-700 font-semibold">Haciendo lo que amamos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUÉ VENDEMOS -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+                    Ropa de potrero, nada más
+                </h2>
+                <p class="text-xl text-gray-600">Todo lo que necesitás para jugar</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Producto 1 -->
+                <div class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tshirt text-3xl text-blue-800"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Camisetas</h3>
+                    <p class="text-gray-600">Diseños únicos y tela de calidad</p>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-running text-3xl text-purple-800"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Shorts</h3>
+                    <p class="text-gray-600">Cómodos y resistentes</p>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shirt text-3xl text-green-800"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mangalargas</h3>
+                    <p class="text-gray-600">Para entrenar o para el frío</p>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-person text-3xl text-yellow-800"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Musculosas</h3>
+                    <p class="text-gray-600">Para los días de calor</p>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12 bg-white rounded-xl p-6 shadow-sm">
+                <p class="text-lg text-gray-700">
+                    También vendemos <strong>conjuntos completos</strong> 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+                    Lo que nos define
+                </h2>
+                <p class="text-xl text-gray-600">Así trabajamos en Doble ZZ</p>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- Valor 1 -->
+                <div class="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-800 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-handshake text-3xl text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-3">Sin vueltas</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Te decimos las cosas como son. Si algo se demora, te avisamos. Si un talle no te va a quedar, te lo decimos antes. No prometemos lo que no podemos cumplir.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 2 -->
+                <div class="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-purple-800 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-award text-3xl text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-3">Calidad que se nota</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Cada prenda está pensada para durar y acompañarte en tus partidos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 3 -->
+                <div class="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-green-700 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-users text-3xl text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-3">Somos del barrio</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            No somos una empresa grande. Seguimos siendo los mismos pibes que empezaron vendiendo a amigos. Te atendemos nosotros, no un call center.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valor 4 -->
+                <div class="flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-yellow-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-heart text-3xl text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-3">Hechos por jugadores</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Sabemos lo que necesitás porque nosotros también jugamos. Cada producto está pensado para gente que juega al futbol.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+                    ¿Por qué comprar en Doble ZZ?
+                </h2>
+                <p class="text-xl text-gray-600">Lo que nos diferencia del resto</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="flex gap-4 items-start p-6 bg-white rounded-xl shadow-sm">
+                    <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-check text-2xl text-purple-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Precios Justos</h3>
+                        <p class="text-gray-700">Vendemos directo, sin intermediarios. Por eso podemos mantener precios accesibles.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start p-6 bg-white rounded-xl shadow-sm">
+                    <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-check text-2xl text-green-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Atención Directa</h3>
+                        <p class="text-gray-700">Te respondemos por WhatsApp, Instagram o mail. Sin robots, hablás con nosotros.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+                    Lo que dicen los que ya compraron
+                </h2>
+                <p class="text-xl text-gray-600">La mejor publicidad son tus palabras</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Compré dos camisetas y quedaron perfectas. La tela es suave y después de varios lavados siguen impecables."</p>
+                    <p class="font-semibold text-gray-900">Matías R.</p>
+                    <p class="text-sm text-gray-500">Cliente</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Me atendieron al toque por WhatsApp y me ayudaron con el talle. La remera llegó rápido y la calidad es muy buena."</p>
+                    <p class="font-semibold text-gray-900">Lucas P.</p>
+                    <p class="text-sm text-gray-500">Quilmes, Buenos Aires</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Compré un conjunto completo y quedó bárbaro. Se nota que seleccionan buenos materiales. Ya volví a comprar."</p>
+                    <p class="font-semibold text-gray-900">Andrea M.</p>
+                    <p class="text-sm text-gray-500">La Plata, Buenos Aires</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                ¿Listo para vestirte como un crack?
+            </h2>
+            <p class="text-xl text-gray-600 mb-10">
+                Unite a los que ya confían en Doble ZZ
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../pages/productos.html" class="px-8 py-4 bg-gradient-to-r from-blue-800 to-blue-900 text-white rounded-lg font-bold text-lg hover:from-blue-900 hover:to-blue-950 transition-all hover:scale-105 shadow-lg">
+                    Ver Productos
+                </a>
+                <a href="./contacto.html" class="px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all shadow-lg">
+                    Contactanos
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- FOOTER -->
+    <footer class="mt-12">
+        <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <!-- Columna izquierda -->
+                <div class="space-y-8">
+                    <img src="../assets/images/dvle.png" alt="Logo" class="h-13">
+                    <p class="text-b leading-6 text-white">
+                        Ropa de potrero, corazón de cancha
+                    </p>
+                    <div class="flex space-x-6">
+                        <!-- redes -->
+                        <a href="https://www.instagram.com/doblezz_10?igsh=MnY4c21hMXY4MmJm&utm_source=qr"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@doblezz_10?_t=ZM-8zX5tKaIrrU&_r=1"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Columnas de links -->
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid footer-menu md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6">Menu</h3>
+              <ul class="mt-6 space-y-4">
+                                <li><a href="../index.html" class="text-sm leading-6 hover:text-white">Inicio</a>
+                                </li>
+                                <li><a href="./productos.html" class="text-sm leading-6  hover:text-white">Productos</a>
+                                </li>
+                                <li><a href="./quienesomos.html" class="text-sm leading-6  hover:text-white">Quienes Somos</a>
+                                </li>
+                                <li><a href="./info.html" class="text-sm leading-6  hover:text-white">Info</a>
+                                </li>
+                                <li><a href="./contacto.html" class="text-sm leading-6  hover:text-white">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-black">Company</h3>
+                            <ul class="mt-6 space-y-4">
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">About</a></li>
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">Blog</a></li>
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">Jobs</a></li>
+                                <li><a href="#" class="text-sm leading-6  hover:text-white">Press</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-black">Contactános</h3>
+                            <ul class="mt-6 space-y-4">
+                                
+                                <li> <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                            class="text-sm leading-6 text-black hover:text-white" hover:text-gray-300" target="_blank">+54 11 5338-1884</li>
+                                <li><a href="#" class="text-sm leading-6 text-black hover:text-white">Gomezzapatajulian03@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-black pt-8">
+                <p class="text-sm leading-5 text-white">&copy; 2025 Doble zz, Todos los  derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
