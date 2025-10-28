@@ -19,95 +19,115 @@
 <body class="bg-white text-black">
   <!-- HEADER -->
   <header id="subir">
-    <nav
-      class="relative bg-blue-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
+ <nav class="relative bg-blue-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
 
-          <!-- Botón Hamburguesa (Móvil) -->
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button type="button"
-              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu" aria-expanded="false">
-              <span class="sr-only">Abrir menú</span>
-              <!-- Ícono hamburguesa -->
-              <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <!-- Ícono cerrar (se oculta con JS) -->
-              <svg class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+      <!-- Botón Hamburguesa (Móvil) -->
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Abrir menú</span>
+          <!-- Ícono hamburguesa -->
+          <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Ícono cerrar -->
+          <svg class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Logo + Menú DESKTOP -->
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <!-- 👇 Ruta modificada (desde /pages vuelve una carpeta atrás con ../ ) -->
+          <img src="../assets/images/dvle.png" alt="Logo Doble ZZ" class="h-8 w-auto" />
+        </div>
+
+        <!-- MENÚ DESKTOP -->
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- 👇 Ajuste de rutas relativas -->
+            <a href="../index.html"
+              class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
+            <a href="./productos.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+            <a href="./quienesomos.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+            <a href="./info.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+            <a href="./contacto.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
           </div>
+        </div>
+      </div>
 
-          <!-- Logo + Menú -->
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex shrink-0 items-center">
-              <img src="../assets/images/dvle.png" alt="Logo Doble ZZ" class="h-8 w-auto" />
-            </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-      <a href="../index.html" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Inicio</a>
-      <a href="./productos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
-      <a href="./quienesomos.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
-            <a href="./info.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
-            <a href="./contacto.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
-              </div>
-            </div>
-          </div>
+      <!-- Buscador + Iconos -->
+      <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-2 sm:space-x-4">
 
-       <!-- Buscador + Lupa + Carrito + Perfil -->
-<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-2 sm:space-x-4">
-  
-  <!-- Input Buscador (oculto en móvil) -->
-  <input class="Buscador hidden sm:block px-3 py-1 rounded-md bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50" 
-         type="text" 
-         placeholder="Buscar...">
-  
-  <!-- Botón Lupa -->
-  <button class="btn-lupa p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
-    <span class="sr-only">Buscar</span>
-    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-    </svg>
-  </button>
-  
-  <!-- Botón Carrito -->
-  <button class="btn-carrito relative p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
-    <span class="sr-only">Carrito</span>
-    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
-    </svg>
-    <!-- Badge contador (opcional) -->
-    <span class="contador-carrito absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">
-      0
-    </span>
-  </button>
-  
-  <!-- Botón Perfil -->
-  <button class="btn-perfil p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
-    <span class="sr-only">Perfil</span>
-    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-    </svg>
-  </button>
+        <!-- Buscador -->
+        <input
+          class="Buscador hidden sm:block px-3 py-1 rounded-md bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+          type="text" placeholder="Buscar...">
 
-</div>
-          <!-- Menú móvil desplegable -->
-          <div class="sm:hidden hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pt-2 pb-3">
-              <a href="#" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Inicio</a>
-              <a href="#"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
-              <a href="#"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes
-                Somos</a>
-              <a href="#"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
-            </div>
-          </div>
-    </nav>
+        <!-- Lupa -->
+        <button
+          class="btn-lupa p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+          <span class="sr-only">Buscar</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+
+        <!-- Carrito -->
+        <button
+          class="btn-carrito relative p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+          <span class="sr-only">Carrito</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span
+            class="contador-carrito absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+        </button>
+
+        <!-- Perfil -->
+        <button
+          class="btn-perfil p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+          <span class="sr-only">Perfil</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="sm:hidden hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <a href="../index.html"
+        class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Inicio</a>
+      <a href="./productos.html"
+        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+      <a href="./quienesomos.html"
+        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+      <a href="./info.html"
+        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+      <a href="./contacto.html"
+        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+    </div>
+  </div>
+</nav>
+
   </header>
   <!-- BANNER DESLIZANTE -->
 <div class="banner-slider-container">
@@ -233,7 +253,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -251,7 +271,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -271,7 +291,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -289,7 +309,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Boca Juniors</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -307,7 +327,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -325,7 +345,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -342,7 +362,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -361,7 +381,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto River Plate</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -380,7 +400,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Independiente</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -399,7 +419,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Rosario Central</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -418,7 +438,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Rosario Central</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -437,7 +457,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Central Cordoba</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -454,7 +474,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Central Cordoba</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -473,7 +493,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Defensa y Justicia</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -492,7 +512,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Talleres</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -511,7 +531,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Banfield</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -529,7 +549,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Gimnasia</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards">
               Comprar
@@ -553,7 +573,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Quilmes</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -571,7 +591,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Sacachispas</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -590,7 +610,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Laferrere</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -608,7 +628,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Laferrere</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -626,7 +646,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Central Norte</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -644,7 +664,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Claypole</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -662,7 +682,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Conjunto Chaco For Ever</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -680,7 +700,7 @@
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
               <h3 class="text-lg font-semibold">Camiseta Manga Larga Chacarita</h3>
-              <p class="text-gray-600 mt-2">$15.000</p>
+              <p class="text-gray-600 mt-2">$14.000</p>
             </div>
             <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
               Comprar
@@ -698,7 +718,7 @@
   <div class="p-4 flex flex-col flex-1 justify-between">
     <div>
       <h3 class="text-lg font-semibold">Camiseta Manga Larga Quilmes</h3>
-      <p class="text-gray-600 mt-2">$15.000</p>
+      <p class="text-gray-600 mt-2">$14.000</p>
     </div>
     <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
       Comprar
@@ -720,7 +740,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Alemania</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -738,7 +758,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Alemania</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -756,7 +776,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Mangalarga Argentina</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -774,7 +794,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -792,7 +812,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Argentina</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -810,7 +830,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Francia</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -828,7 +848,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Camiseta Manga Larga Brasil</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -850,7 +870,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Fluminense</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -868,7 +888,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Palmeiras</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -886,7 +906,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Flamengo</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -904,7 +924,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Fluminense</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -927,7 +947,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Real Madrid</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -945,7 +965,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Real Madrid</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -963,7 +983,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Barcelona</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -981,7 +1001,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Barcelona</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -999,7 +1019,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Atletico Madrid</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1017,7 +1037,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Inter De Milan</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1035,7 +1055,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Milan</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1053,7 +1073,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Milan</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1071,7 +1091,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Milan</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1089,7 +1109,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Napoli</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1107,7 +1127,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Liverpool</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1132,7 +1152,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1150,7 +1170,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1168,7 +1188,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Los Pibes De Fiorito</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1186,7 +1206,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Team Balanza</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1204,7 +1224,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Team Balanza</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1222,7 +1242,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Team Nene</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1240,7 +1260,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto Team Nene</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1258,7 +1278,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto MDS</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1276,7 +1296,7 @@
     <div class="p-4 flex flex-col flex-1 justify-between">
       <div>
         <h3 class="text-lg font-semibold">Conjunto MDS</h3>
-        <p class="text-gray-600 mt-2">$15.000</p>
+        <p class="text-gray-600 mt-2">$14.000</p>
       </div>
       <button class="mt-4 w-full bg-blue-800/50 text-white py-2 rounded hover:bg-blue-700 transition btn-cards ">
         Comprar
@@ -1286,74 +1306,64 @@
 </div>
   </main>
   <!-- FOOTER -->
-  <footer class="mt-12">
-    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-        <!-- Columna izquierda -->
-        <div class="space-y-8">
-          <img src="../assets/images/dvle.png" alt="Logo" class="h-13">
-          <p class="text-b leading-6 text-white">
-            Ropa de potrero, corazón de cancha
-          </p>
-          <div class="flex space-x-6">
-            <!-- redes -->
-            <a href="https://www.instagram.com/doblezz_10?igsh=MnY4c21hMXY4MmJm&utm_source=qr"
-              class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@doblezz_10?_t=ZM-8zX5tKaIrrU&_r=1" class="icon-footer hover:text-gray-300"
-              target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
-              class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-        </div>
-        <!-- Columnas de links -->
-        <div class="mt-16 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-          <div class="md:grid footer-menu md:gap-8">
-            <div>
-              <h3 class="text-sm font-semibold leading-6">Menu</h3>
-              <ul class="mt-6 space-y-4">
-                                <li><a href="../index.html" class="text-sm leading-6 hover:text-white">Inicio</a>
-                                </li>
-                                <li><a href="./productos.html" class="text-sm leading-6  hover:text-white">Productos</a>
-                                </li>
-                                <li><a href="./quienesomos.html" class="text-sm leading-6  hover:text-white">Quienes Somos</a>
-                                </li>
-                                <li><a href="./info.html" class="text-sm leading-6  hover:text-white">Info</a>
-                                </li>
-                                <li><a href="./contacto.html" class="text-sm leading-6  hover:text-white">Contacto</a>
-                                </li>
-                            </ul>
-            </div>
-
-          </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-semibold leading-6 text-black">Company</h3>
-              <ul class="mt-6 space-y-4">
-                <li><a href="#" class="text-sm leading-6  hover:text-white">About</a></li>
-                <li><a href="#" class="text-sm leading-6  hover:text-white">Blog</a></li>
-                <li><a href="#" class="text-sm leading-6  hover:text-white">Jobs</a></li>
-                <li><a href="#" class="text-sm leading-6  hover:text-white">Press</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-sm font-semibold leading-6 text-black">Contactános</h3>
-              <ul class="mt-6 space-y-4">
-
-                <li> <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
-                    class="text-sm leading-6 text-black hover:text-white" hover:text-gray-300" target="_blank">+54 11
-                    5338-1884</li>
-                <li><a href="#" class="text-sm leading-6 text-black hover:text-white">Gomezzapatajulian03@gmail.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+<footer class="mt-12">
+  <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+      <!-- Columna izquierda -->
+      <div class="space-y-8">
+        <img src="../assets/images/dvle.png" alt="Logo" class="h-13">
+        <p class="text-b leading-6 text-white">
+          Ropa de potrero, corazón de cancha
+        </p>
+        <div class="flex space-x-6">
+          <a href="https://www.instagram.com/doblezz_10?igsh=MnY4c21hMXY4MmJm&utm_source=qr"
+            class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@doblezz_10?_t=ZM-8zX5tKaIrrU&_r=1"
+            class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+            class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-      <div class="mt-16 border-t border-black pt-8">
-        <p class="text-sm leading-5 text-white">&copy; 2025 Doble zz, Todos los derechos reservados.</p>
+
+      <!-- Columna derecha (Menú + Contacto) -->
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:mt-0">
+        <div>
+          <h3 class="text-sm font-semibold leading-6">Menu</h3>
+          <ul class="mt-6 space-y-4">
+            <li><a href="../index.html" class="text-sm leading-6 hover:text-white">Inicio</a></li>
+            <li><a href="./productos.html" class="text-sm leading-6 hover:text-white">Productos</a></li>
+            <li><a href="./quienesomos.html" class="text-sm leading-6 hover:text-white">Quienes Somos</a></li>
+            <li><a href="./info.html" class="text-sm leading-6 hover:text-white">Info</a></li>
+            <li><a href="./contacto.html" class="text-sm leading-6 hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold leading-6 text-black">Contáctanos</h3>
+          <ul class="mt-6 space-y-4">
+            <li>
+              <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                class="text-sm leading-6 text-black hover:text-white" target="_blank">
+                +54 11 5338-1884
+              </a>
+            </li>
+            <li>
+              <a href="mailto:Gomezzapatajulian03@gmail.com"
+                class="text-sm leading-6 text-black hover:text-white">
+                Gomezzapatajulian03@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </footer>
+
+    <div class="mt-16 border-t border-black pt-8">
+      <p class="text-sm leading-5 text-white">&copy; 2025 Doble zz, Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>

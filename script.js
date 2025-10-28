@@ -521,6 +521,7 @@ const productos=[{
     // // CARRRITO PROXIMAMENTE
     let carrito=[]
     let total=0
+    
 
 const lupa_boton = document.querySelector(".btn-lupa");
 const buscador_input = document.querySelector(".Buscador");
@@ -609,3 +610,46 @@ function limpiarBusqueda() {
     buscarProductos("");
 }
 
+
+// SECCION CONTACTO CON EMAILJS
+
+// 1. Inicialización de EmailJS con el User ID (Public Key)
+// User ID: 0BurCND5jdUezS9ZJ
+emailjs.init("0BurCND5jdUezS9ZJ"); 
+
+// 2. Definición de variables del formulario
+const form = document.getElementById('form-contacto');
+const btn = form.querySelector('button[type="submit"]');
+
+// 3. IDs del servicio y la plantilla
+const SERVICE_ID = 'service_ljafooc'; 
+const TEMPLATE_ID = 'template_padj6wu'; 
+
+
+// 4. Listener para el envío del formulario
+form.addEventListener('submit', function(event) {
+    // Evita el envío por defecto de HTML
+    event.preventDefault(); 
+
+    // Bloquea el botón y cambia el texto
+    const originalText = btn.innerText;
+    btn.innerText = 'Enviando...';
+    btn.disabled = true; 
+    
+    // Función de envío de EmailJS
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this) // 'this' es el formulario HTML
+        .then(() => {
+            // Éxito: Muestra alerta y limpia el formulario
+            alert('✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.');
+            form.reset(); 
+        }, (error) => {
+            // Error: Muestra alerta y registra el error
+            console.error('EmailJS Error:', error);
+            alert('❌ Ocurrió un error al enviar el mensaje. Intenta de nuevo. Revisa la consola (F12) para detalles.');
+        })
+        .finally(() => {
+            // Finaliza: Restaura el botón
+            btn.innerText = originalText; 
+            btn.disabled = false; 
+        });
+});
