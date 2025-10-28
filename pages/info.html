@@ -55,17 +55,42 @@
 
 </div>
 
-<!-- Lupa + Perfil -->
-<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
-  <input class="Buscador" type="text" placeholder="Buscar">
-  <!-- Lupa -->
-  <button class="p-1 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+<!-- Buscador + Lupa + Carrito + Perfil -->
+<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-2 sm:space-x-4">
+  
+  <!-- Input Buscador (oculto en móvil) -->
+  <input class="Buscador hidden sm:block px-3 py-1 rounded-md bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50" 
+         type="text" 
+         placeholder="Buscar...">
+  
+  <!-- Botón Lupa -->
+  <button class="btn-lupa p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
     <span class="sr-only">Buscar</span>
     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
     </svg>
   </button>
-  <!-- Perfil -->
+  
+  <!-- Botón Carrito -->
+  <button class="btn-carrito relative p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+    <span class="sr-only">Carrito</span>
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+    </svg>
+    <!-- Badge contador (opcional) -->
+    <span class="contador-carrito absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">
+      0
+    </span>
+  </button>
+  
+  <!-- Botón Perfil -->
+  <button class="btn-perfil p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+    <span class="sr-only">Perfil</span>
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+    </svg>
+  </button>
+
 </div>
   <!-- Menú móvil desplegable -->
   <div class="sm:hidden hidden" id="mobile-menu">
@@ -78,15 +103,270 @@
   </div>
 </nav>
     </header>
-
-    <!-- MAIN CONTENT -->
-    <main>
-        <div class="overflow-x-auto">
- <img src="../assets/images/Guiadetalles.png" alt="Talles">
-</div>
-
-
+    <!-- BANNER DESLIZANTE -->
+<div class="banner-slider-container">
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <div class="slider-item">
+        <div class="slider-content">
+          <h2 class="slider-title">🛍️ Promo mayorista: llevá 10 conjuntos de $14.000 y pagá solo $10.000 c/u 🔥</h2>
+        </div>
       </div>
+      <div class="slider-item">
+        <div class="slider-content">
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-content">
+          <h2 class="slider-title">DESCUENTOS EN PRENDAS SELECCIONADAS</h2>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-content">
+          <h2 class="slider-title">SÍGUENOS EN @doblezz_10</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- MAIN CONTENT -->
+    <main class="py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            
+            <!-- Título de la página -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Información útil</h1>
+                <p class="text-lg text-gray-600">Todo lo que necesitás saber sobre nuestros productos</p>
+            </div>
+
+            <!-- Tabs de navegación -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="tab-button active px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all" data-tab="talles">
+                    <i class="fas fa-ruler mr-2"></i>Guía de Talles
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg font-semibold text-sm md:text-base bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-tab="lavado">
+                    <i class="fas fa-tint mr-2"></i>Cuidado de Lavado
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg font-semibold text-sm md:text-base bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-tab="pagos">
+                    <i class="fas fa-credit-card mr-2"></i>Medios de Pago
+                </button>
+            </div>
+
+            <!-- Contenido de las pestañas -->
+            
+            <!-- GUÍA DE TALLES -->
+            <div id="talles-content" class="content-section">
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Guía de Talles</h2>
+                    <p class="text-gray-600 text-center mb-8">Encontrá tu talle perfecto con nuestras guías de medidas</p>
+                    
+                    <!-- Imágenes de guía de talles -->
+                    <div class="space-y-8">
+                        <!-- Guía de talles principal -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden">
+                            <img src="../assets/images/Guia_talle.png" alt="Guía de Talles" class="w-full h-auto">
+                        </div>
+                        
+                        <!-- Guía de talles ML -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden">
+                            <img src="../assets/Guia_talle_ml.png" alt="Guía de Talles ML" class="w-full h-auto">
+                        </div>
+                    </div>
+
+                    <!-- Tips adicionales -->
+                    <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-2">
+                            <i class="fas fa-lightbulb mr-2"></i>Tips para elegir tu talle
+                        </h3>
+                        <ul class="text-blue-800 space-y-2">
+                            <li><i class="fas fa-check mr-2 text-blue-600"></i>Medí tu prenda favorita para comparar</li>
+                            <li><i class="fas fa-check mr-2 text-blue-600"></i>Si estás entre dos talles, te recomendamos elegir el mayor</li>
+                            <li><i class="fas fa-check mr-2 text-blue-600"></i>Todas las medidas están en centímetros</li>
+                            <li><i class="fas fa-check mr-2 text-blue-600"></i>Ante cualquier duda, contactanos por WhatsApp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUIDADO DE LAVADO -->
+            <div id="lavado-content" class="content-section hidden">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Cuidado de Lavado</h2>
+                    <p class="text-gray-600 text-center mb-12">Seguí estas recomendaciones para que tus prendas duren más tiempo</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Lavado -->
+                        <div class="care-card text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-hand-sparkles text-4xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Lavar a mano</h3>
+                            <p class="text-gray-600">Preferiblemente lavar a mano con agua fría para mantener la calidad de la tela</p>
+                        </div>
+
+                        <!-- Temperatura -->
+                        <div class="care-card text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-temperature-low text-4xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Agua fría</h3>
+                            <p class="text-gray-600">Usar agua fría (máximo 30°C) para evitar decoloración y encogimiento</p>
+                        </div>
+
+                        <!-- No planchar -->
+                        <div class="care-card text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-ban text-4xl text-red-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">No planchar</h3>
+                            <p class="text-gray-600">Evitar la plancha directa sobre estampados y logos</p>
+                        </div>
+
+                        <!-- No blanquear -->
+                        <div class="care-card text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-fill-drip text-4xl text-red-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">No usar lavandina</h3>
+                            <p class="text-gray-600">No utilizar blanqueadores ni productos químicos agresivos</p>
+                        </div>
+
+                        <!-- Secar -->
+                        <div class="care-card text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-wind text-4xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Secar al aire</h3>
+                            <p class="text-gray-600">Secar a la sombra, evitar exposición directa al sol</p>
+                        </div>
+
+                        <!-- No secarropas -->
+                        <div class="care-card text-center">
+                            <div class="care-icon">
+                                <i class="fas fa-circle-xmark text-4xl text-red-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">No secarropas</h3>
+                            <p class="text-gray-600">Evitar el uso de secarropas para preservar la forma y calidad</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Nota importante -->
+                    <div class="mt-10 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
+                        <h3 class="text-lg font-semibold text-yellow-900 mb-2">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>Importante
+                        </h3>
+                        <p class="text-yellow-800">
+                            Lavar las prendas del revés para proteger los estampados y colores. Separar las prendas oscuras de las claras en el primer lavado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEDIOS DE PAGO -->
+            <div id="pagos-content" class="content-section hidden">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Medios de Pago</h2>
+                    <p class="text-gray-600 text-center mb-12">Elegí el método de pago que más te convenga</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <!-- Transferencia Bancaria -->
+                        <div class="payment-method bg-white rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-university text-2xl text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Transferencia Bancaria</h3>
+                                    <p class="text-sm text-green-600 font-semibold">Descuento 5%</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Realizá tu transferencia y obtené un descuento adicional</p>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Acreditación inmediata</li>
+                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Sin comisiones extra</li>
+                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>CBU/Alias disponibles al finalizar compra</li>
+                            </ul>
+                        </div>
+
+                        <!-- Mercado Pago -->
+                        <div class="payment-method bg-white rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-mobile-alt text-2xl text-cyan-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Mercado Pago</h3>
+                                    <p class="text-sm text-gray-500 font-semibold">Hasta 12 cuotas</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Pagá en cuotas sin interés con tarjetas seleccionadas</p>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li><i class="fas fa-check-circle text-cyan-500 mr-2"></i>Pago 100% seguro</li>
+                                <li><i class="fas fa-check-circle text-cyan-500 mr-2"></i>Todas las tarjetas</li>
+                                <li><i class="fas fa-check-circle text-cyan-500 mr-2"></i>Link de pago personalizado</li>
+                            </ul>
+                        </div>
+
+                        <!-- Efectivo -->
+                        <div class="payment-method bg-white rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-money-bill-wave text-2xl text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Efectivo</h3>
+                                    <p class="text-sm text-green-600 font-semibold">Descuento 10%</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Retiro personal y pago en efectivo en nuestro local</p>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Máximo descuento disponible</li>
+                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Ver productos antes de comprar</li>
+                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Sin costos de envío</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tarjetas -->
+                        <div class="payment-method bg-white rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-credit-card text-2xl text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Tarjetas de Crédito</h3>
+                                    <p class="text-sm text-gray-500 font-semibold">3, 6 y 12 cuotas</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Aceptamos todas las tarjetas con financiación</p>
+                            <div class="flex gap-3 mt-4 flex-wrap">
+                                <div class="px-3 py-1 bg-gray-100 rounded text-sm font-semibold text-gray-700">Visa</div>
+                                <div class="px-3 py-1 bg-gray-100 rounded text-sm font-semibold text-gray-700">Mastercard</div>
+                                <div class="px-3 py-1 bg-gray-100 rounded text-sm font-semibold text-gray-700">Amex</div>
+                                <div class="px-3 py-1 bg-gray-100 rounded text-sm font-semibold text-gray-700">Cabal</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Información adicional -->
+                    <div class="mt-10 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">
+                            <i class="fas fa-info-circle mr-2"></i>Información sobre pagos
+                        </h3>
+                        <ul class="text-blue-800 space-y-2">
+                            <li><i class="fas fa-shield-alt mr-2 text-blue-600"></i>Todas tus transacciones están protegidas</li>
+                            <li><i class="fas fa-clock mr-2 text-blue-600"></i>Tu pedido se procesa una vez confirmado el pago</li>
+                            <li><i class="fas fa-whatsapp mr-2 text-blue-600"></i>Para mayoristas, consultá condiciones especiales por WhatsApp</li>
+                            <li><i class="fas fa-envelope mr-2 text-blue-600"></i>Recibirás un comprobante por email</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
     <!-- FOOTER -->
     <footer class="mt-12">

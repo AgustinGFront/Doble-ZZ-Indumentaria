@@ -57,21 +57,43 @@
             </div>
           </div>
 
-          <!-- Lupa + Perfil -->
-          <div
-            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
-            <input class="Buscador" type="text" placeholder="Buscar">
-            <!-- Lupa -->
-            <button
-              class="p-1 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
-              <span class="sr-only">Buscar</span>
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-            <!-- Perfil -->
-          </div>
+       <!-- Buscador + Lupa + Carrito + Perfil -->
+<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-2 sm:space-x-4">
+  
+  <!-- Input Buscador (oculto en móvil) -->
+  <input class="Buscador hidden sm:block px-3 py-1 rounded-md bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50" 
+         type="text" 
+         placeholder="Buscar...">
+  
+  <!-- Botón Lupa -->
+  <button class="btn-lupa p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+    <span class="sr-only">Buscar</span>
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+    </svg>
+  </button>
+  
+  <!-- Botón Carrito -->
+  <button class="btn-carrito relative p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+    <span class="sr-only">Carrito</span>
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+    </svg>
+    <!-- Badge contador (opcional) -->
+    <span class="contador-carrito absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">
+      0
+    </span>
+  </button>
+  
+  <!-- Botón Perfil -->
+  <button class="btn-perfil p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+    <span class="sr-only">Perfil</span>
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+    </svg>
+  </button>
+
+</div>
           <!-- Menú móvil desplegable -->
           <div class="sm:hidden hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
@@ -87,20 +109,124 @@
           </div>
     </nav>
   </header>
+  <!-- BANNER DESLIZANTE -->
+<div class="banner-slider-container">
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <div class="slider-item">
+        <div class="slider-content">
+          <h2 class="slider-title">🛍️ Promo mayorista: llevá 10 conjuntos de $14.000 y pagá solo $10.000 c/u 🔥</h2>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-content">
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-content">
+          <h2 class="slider-title">DESCUENTOS EN PRENDAS SELECCIONADAS</h2>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-content">
+          <h2 class="slider-title">SÍGUENOS EN @doblezz_10</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- MAIN CONTENT -->
 <main>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <h2 class="text-3xl font-bold mb-8 text-center">Nuestros Productos</h2>
+      <div class="flex gap-8">
+          <!-- SIDEBAR DE FILTROS -->
+      <aside class="w-64 flex-shrink-0 hidden lg:block">
+        <div class="bg-white border rounded-lg p-6 sticky top-4">
+          <h3 class="text-xl font-bold mb-6">Filtros</h3>
+          
+          <!-- Filtro por Talles -->
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3 text-gray-700">Talles</h4>
+            <div class="space-y-2">
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="M" class="filtro-talle w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">M</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="L" class="filtro-talle w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">L</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="XL" class="filtro-talle w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">XL</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="XXL" class="filtro-talle w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">XXL</span>
+              </label>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <!-- Filtro por Rango de Precio -->
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3 text-gray-700">Precio</h4>
+            <div class="px-2">
+              <input type="range" min="10000" max="20000" step="1000" value="20000" 
+                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" 
+                     id="precio-slider">
+              <div class="flex justify-between mt-2 text-sm text-gray-600">
+                <span>$10.000</span>
+                <span id="precio-valor" class="font-semibold text-blue-600">$20.000</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <!-- Filtro por Estilo (Manga) -->
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3 text-gray-700">Estilo</h4>
+            <div class="space-y-2">
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="Manga Corta" class="filtro-estilo w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">Manga Corta</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="Mangalarga" class="filtro-estilo w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">Manga Larga</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" value="Musculosa" class="filtro-estilo w-4 h-4 text-blue-600 rounded">
+                <span class="ml-2 text-gray-700">Musculosa</span>
+              </label>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <!-- Botón Limpiar Filtros -->
+          <button onclick="limpiarFiltros()" 
+                  class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition">
+            Limpiar Filtros
+          </button>
+        </div>
+      </aside>
+      
+              <div class="flex-1">
       <h5 class="text-2xl font-bold mb-8 text-center text-black">Primera Division</h5>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
 
         <!-- Producto 1 -->
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Boca1.jpeg" alt="camiseta_cabj"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Boca2.jpeg" 
               alt="camiseta_cabj_trasera" class="imagen-hover">
           </div>
@@ -118,7 +244,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Boca_ML.jpeg" alt="camiseta_cabj4"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Boca_ML2.jpeg" 
               alt="camiseta_cabj4_trasera" class="imagen-hover">
           </div>
@@ -138,7 +264,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Boca_quilmes.jpeg" alt="camiseta_cabj2"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Boca_quilmes2.jpeg" 
               alt="camiseta_cabj2_trasera" class="imagen-hover">
           </div>
@@ -156,7 +282,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Boca_azul.jpeg" alt="camiseta_cabj3"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Boca_azul2.jpeg" 
               alt="camiseta_cabj3_trasera" class="imagen-hover">
           </div>
@@ -174,7 +300,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/River_Ml.jpeg" alt="camiseta_carp2"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/River_ML2.jpeg" 
               alt="camiseta_carp2_trasera" class="imagen-hover">
           </div>
@@ -192,7 +318,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/River.jpeg" alt="camiseta_carp"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/River2.jpeg" 
               alt="camiseta_carp_trasera" class="imagen-hover">
           </div>
@@ -209,7 +335,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/River_blanca.jpeg" alt="camiseta_carp3"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/River_blanca2.jpeg" 
               alt="camiseta_carp3_trasera" class="imagen-hover">
           </div>
@@ -228,7 +354,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/River1.jpeg" alt="camiseta_carp1"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/River2.jpeg" 
               alt="camiseta_carp1_trasera" class="imagen-hover">
           </div>
@@ -247,7 +373,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Independiente2.jpeg" alt="camiseta_cai"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Independiente1.jpeg" 
               alt="camiseta_cai_trasera" class="imagen-hover">
           </div>
@@ -266,7 +392,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Central1.jpeg" alt="camiseta_carc"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Central2.jpeg" 
               alt="camiseta_carc_trasera" class="imagen-hover">
           </div>
@@ -285,7 +411,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Central_alternativa.jpeg" alt="camiseta_carc2"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Central_alternativa2.jpeg" 
               alt="camiseta_carc2_trasera" class="imagen-hover">
           </div>
@@ -304,7 +430,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba.jpeg" alt="camiseta_cacc"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba2.jpeg" 
               alt="camiseta_cacc_trasera" class="imagen-hover">
           </div>
@@ -321,7 +447,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba_mangalarga.jpeg"
-              alt="camiseta_cacc2" class="imagen-principal w-full h-50 object-cover">
+              alt="camiseta_cacc2" class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Central_cordoba_mangalarga2.jpeg" 
               alt="camiseta_cacc2_trasera" class="imagen-hover">
           </div>
@@ -340,7 +466,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Defensa_y_justicia 2 (2).jpeg"
-              alt="camiseta_dyj" class="imagen-principal w-full h-50 object-cover">
+              alt="camiseta_dyj" class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Defensa_y_justicia 2 (1).jpeg" 
               alt="camiseta_dyj_trasera" class="imagen-hover">
           </div>
@@ -359,7 +485,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Talleres.jpeg" alt="camiseta_cat"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Talleres2.jpeg" 
               alt="camiseta_cat_trasera" class="imagen-hover">
           </div>
@@ -378,7 +504,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Banfield.jpeg" alt="camiseta_cab"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Banfield2.jpeg" 
               alt="camiseta_cab_trasera" class="imagen-hover">
           </div>
@@ -396,7 +522,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Primera division/Gimnasia1.jpeg" alt="camiseta_gimnasia_lp"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Primera division/Gimnasia2.jpegs" 
               alt="camiseta_gimnasia_lp_trasera" class="imagen-hover">
           </div>
@@ -420,7 +546,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Quilmes1.jpeg" alt="camiseta_qac"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Quilmes2.jpeg" 
               alt="camiseta_qac_trasera" class="imagen-hover">
           </div>
@@ -438,7 +564,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Sacachispas.jpeg" alt="camiseta_sacachispas"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Sacachispas2.jpeg" 
               alt="camiseta_sacachispas_trasera" class="imagen-hover">
           </div>
@@ -457,7 +583,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Laferrerre1.jpeg" alt="camiseta_laferrere"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Laferrere2.jpeg" 
               alt="camiseta_laferrere_trasera" class="imagen-hover">
           </div>
@@ -475,7 +601,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Laferreree.jpeg" alt="camiseta_laferrere2"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Laferreree2.jpeg" 
               alt="camiseta_laferrere2_trasera" class="imagen-hover">
           </div>
@@ -493,7 +619,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Centralnorte.jpeg" alt="camiseta_central_norte"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Centralnorte2.jpeg" 
               alt="camiseta_central_norte_trasera" class="imagen-hover">
           </div>
@@ -511,7 +637,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Claypole1.jpeg" alt="camiseta_claypole"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Claypole2.jpeg" 
               alt="camiseta_claypole_trasera" class="imagen-hover">
           </div>
@@ -529,7 +655,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Ascenso/Chacoforever (1).jpeg" alt="camiseta_Cfe"
-              class="imagen-principal w-full h-50 object-cover">
+              class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Ascenso/Chacoforever (2).jpeg" 
               alt="camiseta_Cfe_trasera" class="imagen-hover">
           </div>
@@ -547,7 +673,7 @@
         <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
           <div class="imagen-container">
             <img src="../assets/images/Productos doble zz/Manga larga/Chacarita_mangalarga.jpeg"
-              alt="camiseta_chacarita_mangalarga" class="imagen-principal w-full h-50 object-cover">
+              alt="camiseta_chacarita_mangalarga" class="imagen-principal w-full  object-cover">
             <img src="../assets/images/Productos doble zz/Manga larga/Chacarita_mangalarga.jpeg" 
               alt="camiseta_chacarita_mangalarga_trasera" class="imagen-hover">
           </div>
@@ -565,7 +691,7 @@
 <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
   <div class="imagen-container">
     <img src="../assets/images/Productos doble zz/Manga larga/Quilmes_mangalarga1.jpeg"
-      alt="camiseta_quilmes_mangalarga" class="imagen-principal w-full h-50 object-cover">
+      alt="camiseta_quilmes_mangalarga" class="imagen-principal w-full  object-cover">
     <img src="../assets/images/Productos doble zz/Manga larga/Quilmes_mangalarga2.jpeg" 
       alt="camiseta_quilmes_mangalarga_trasera" class="imagen-hover">
   </div>
@@ -587,7 +713,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Alemania1.jpeg" alt="camiseta_Alemaniia"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Alemania2.jpeg" 
         alt="camiseta_Alemaniia_trasera" class="imagen-hover">
     </div>
@@ -605,7 +731,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Alemania_2010.jpeg" alt="camiseta_Alemania2"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Alemania_2010_2.jpeg" 
         alt="camiseta_Alemania2_trasera" class="imagen-hover">
     </div>
@@ -623,7 +749,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul_riquelme.jpeg" alt="camiseta_Argentina_2006"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul-riquelme.jpeg" 
         alt="camiseta_Argentina_2006_trasera" class="imagen-hover">
     </div>
@@ -641,7 +767,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul2.jpeg" alt="camiseta_Argentina_Azul"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Argentina_azul1.jpeg" 
         alt="camiseta_Argentina_Azul_trasera" class="imagen-hover">
     </div>
@@ -659,7 +785,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Argentina_blanca1.jpeg" alt="camiseta_Argentina2"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Argentina_blanca2.jpeg" 
         alt="camiseta_Argentina2_trasera" class="imagen-hover">
     </div>
@@ -677,7 +803,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Francia.jpeg" alt="camiseta_Francia"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Francia2.jpeg" 
         alt="camiseta_Francia_trasera" class="imagen-hover">
     </div>
@@ -695,7 +821,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Selecciones/Brasil.jpeg" alt="camiseta_Br_mangalarga"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Selecciones/Brasil2.jpeg" 
         alt="camiseta_Br_mangalarga_trasera" class="imagen-hover">
     </div>
@@ -717,7 +843,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense.jpeg" alt="camiseta_Fluminense"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense2.jpeg" 
         alt="camiseta_Fluminense_trasera" class="imagen-hover">
     </div>
@@ -735,7 +861,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Sudamerica/Palmeiras_musculosa.jpeg" alt="camiseta_Palmeiras"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Sudamerica/Palmeiras_musculosa2.jpeg" 
         alt="camiseta_Palmeiras_trasera" class="imagen-hover">
     </div>
@@ -753,7 +879,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Sudamerica/Flamengo_musculosa.jpeg" alt="camiseta_Flamengo"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Sudamerica/Flamengo_musculosa2.jpeg" 
         alt="camiseta_Flamengo_trasera" class="imagen-hover">
     </div>
@@ -771,7 +897,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense_musculosa.jpeg" alt="camiseta_Fluminense2"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Sudamerica/Fluminense_musculosa2.jpeg" 
         alt="camiseta_Fluminense2_trasera" class="imagen-hover">
     </div>
@@ -794,7 +920,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Real_Madrid.jpeg" alt="camiseta_Real_madrid"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Real_Madrid2.jpeg" 
         alt="camiseta_Real_madrid_trasera" class="imagen-hover">
     </div>
@@ -812,7 +938,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Real_azul.jpeg" alt="camiseta_Real_madrid_azul "
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Real_azul2.jpeg" 
         alt="camiseta_Real_madrid_azul_trasera" class="imagen-hover">
     </div>
@@ -830,7 +956,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Barcelona_ML2.jpeg" alt="camiseta_Barcelona_Manga_larga"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Barcelona_ML.jpeg" 
         alt="camiseta_Barcelona_Manga_larga_trasera" class="imagen-hover">
     </div>
@@ -848,7 +974,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Barcelona.jpeg" alt="camiseta_Barcelona"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Barcelona2.jpeg" 
         alt="camiseta_Barcelona_trasera" class="imagen-hover">
     </div>
@@ -866,7 +992,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Atletico.jpeg" alt="camiseta_Atletico_madrid"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Atletico2.jpeg" 
         alt="camiseta_Atletico_madrid_trasera" class="imagen-hover">
     </div>
@@ -884,7 +1010,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Inter_mangalarga.jpeg" alt="camiseta_Inter_milan"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Inter_mangalarga2.jpeg" 
         alt="camiseta_Inter_milan_trasera" class="imagen-hover">
     </div>
@@ -902,7 +1028,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Milan2.jpeg" alt="camiseta_Milan"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Milan.jpeg" 
         alt="camiseta_Milan_trasera" class="imagen-hover">
     </div>
@@ -920,7 +1046,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Milan_blanca1.jpeg" alt="camiseta_Milan_blanca"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Milan_blanca2.jpeg" 
         alt="camiseta_Milan_blanca_trasera" class="imagen-hover">
     </div>
@@ -938,7 +1064,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Milann1.jpeg" alt="camiseta_Milan2"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Milann2.jpeg" 
         alt="camiseta_Milan2_trasera" class="imagen-hover">
     </div>
@@ -956,7 +1082,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Napoli.jpeg" alt="camiseta_Napoli"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Napoli2.jpeg" 
         alt="camiseta_Napoli_trasera" class="imagen-hover">
     </div>
@@ -974,7 +1100,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Europa/Liverpool (1).jpeg" alt="camiseta_Liverpool"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Europa/Liverpool (2).jpeg" 
         alt="camiseta_Liverpool_trasera" class="imagen-hover">
     </div>
@@ -992,8 +1118,6 @@
 
 
 <!-- ACAA -->
-
-
      <hr class="border-t-4 border-black my-8">
 <h5 class="text-2xl font-bold mb-8 text-center text-black">Influencers</h5>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -1001,7 +1125,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/Fiorito_1.jpeg" alt="camiseta_LPDF"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/Fiorito_2.jpeg" 
         alt="camiseta_LPDF_trasera" class="imagen-hover">
     </div>
@@ -1019,7 +1143,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/LPDF-Musculosa.jpeg" alt="camiseta_LPDF_musculosa"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/LPDF-Musculosa2.jpeg" 
         alt="camiseta_LPDF_musculosa_trasera" class="imagen-hover">
     </div>
@@ -1037,7 +1161,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/LPDF_Ml (1).jpeg" alt="camiseta_LPDF_ml"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/LPDF_Ml (2).jpeg" 
         alt="camiseta_LPDF_ml_trasera" class="imagen-hover">
     </div>
@@ -1055,7 +1179,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_1.jpeg" alt="camiseta_Team_balanza"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_2.jpeg" 
         alt="camiseta_Team_balanza_trasera" class="imagen-hover">
     </div>
@@ -1073,7 +1197,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_musculosa.jpeg" alt="camiseta_Team_balanza_musculosa"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/Team_balanza_musculosa (2).jpeg" 
         alt="camiseta_Team_balanza_musculosa_trasera" class="imagen-hover">
     </div>
@@ -1091,7 +1215,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/Team_nene2.jpeg" alt="camiseta_team_nene"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/team_nene.jpeg" 
         alt="camiseta_team_nene_trasera" class="imagen-hover">
     </div>
@@ -1109,7 +1233,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/Team_nene_ML (1).jpeg" alt="camiseta_team_nene_ml"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/Team_nene_ML (2).jpeg" 
         alt="camiseta_team_nene_ml_trasera" class="imagen-hover">
     </div>
@@ -1127,7 +1251,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/MDS_musculosa.jpeg" alt="camiseta_MDS"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/MDS_musculosa2.jpeg" 
         alt="camiseta_MDS_trasera" class="imagen-hover">
     </div>
@@ -1145,7 +1269,7 @@
   <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col">
     <div class="imagen-container">
       <img src="../assets/images/Productos doble zz/Influencers/MDS_ML (2).jpeg" alt="camiseta_MDS_ML"
-        class="imagen-principal w-full h-50 object-cover">
+        class="imagen-principal w-full  object-cover">
       <img src="../assets/images/Productos doble zz/Influencers/MDS_ML (1).jpeg" 
         alt="camiseta_MDS_ML_trasera" class="imagen-hover">
     </div>
