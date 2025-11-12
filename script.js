@@ -1,3 +1,151 @@
+// Firebase imports - usando CDN de Google
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBdQbiu0zcaxMEIhf7ght83QVfRZ5wd0W0", 
+  authDomain: "doble-zz-3685f.firebaseapp.com",
+  projectId: "doble-zz-3685f",
+  storageBucket: "doble-zz-3685f.firebasestorage.app",
+  messagingSenderId: "1020448708385",
+  appId: "1:1020448708385:web:62b5332f7a1c25321ed060",
+  measurementId: "G-47JM6X7NQN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+
+// Auth functions
+const loginWithGoogle = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    return result.user;
+  } catch (error) {
+    console.error('Error al iniciar sesión:', error);
+    throw error;
+  }
+};
+
+const logout = async () => {
+  try {
+    await signOut(auth);
+  } catch (error) {
+    console.error('Error al cerrar sesión:', error);
+    throw error;
+  }
+};
+
+// Función para redirigir a login.html
+function redirigirALogin() {
+  // Determinar la ruta correcta a login.html
+  const currentPath = window.location.pathname;
+  const currentUrl = window.location.href;
+  
+  let loginPath;
+  if (currentPath.includes('/pages/') || currentUrl.includes('/pages/')) {
+    // Si estamos en la carpeta pages, login.html está en la misma carpeta
+    loginPath = './login.html';
+  } else {
+    // Si estamos en la raíz, login.html está en pages/
+    loginPath = './pages/login.html';
+  }
+  
+  window.location.href = loginPath;
+  return false; // Prevenir cualquier comportamiento por defecto
+}
+
+// Múltiples métodos para asegurar que funcione
+//
+document.addEventListener('click', (e) => {
+  const btnPerfil = e.target.closest('.btn-perfil');
+  if (btnPerfil) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    redirigirALogin();
+    return false;
+  }
+}, true); // Usar capture phase para interceptar antes que otros listeners
+
+// 
+function agregarListenerDirecto() {
+  const btnPerfil = document.querySelector('.btn-perfil');
+  if (btnPerfil) {
+    // Remover listeners anteriores si existen
+    const nuevoBtn = btnPerfil.cloneNode(true);
+    btnPerfil.parentNode.replaceChild(nuevoBtn, btnPerfil);
+    
+    // Agregar el listener al nuevo botón
+    nuevoBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      redirigirALogin();
+      return false;
+    });
+  }
+}
+
+// Función para configurar el botón de perfil
+function configurarBotonPerfil() {
+  const btnPerfil = document.querySelector('.btn-perfil');
+  
+  if (!btnPerfil) {
+    // Intentar de nuevo después de un breve delay
+    setTimeout(configurarBotonPerfil, 100);
+    return;
+  }
+  
+  let currentUser = null;
+
+  // Listen to auth state changes
+  onAuthStateChanged(auth, (user) => {
+    currentUser = user;
+    
+    if (user) {
+      btnPerfil.innerHTML = `
+        <span class="sr-only">Perfil</span>
+        <img src="${user.photoURL}" alt="${user.displayName}" class="h-6 w-6 rounded-full object-cover border-2 border-white" />
+      `;
+    } else {
+      btnPerfil.innerHTML = `
+        <span class="sr-only">Perfil</span>
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+        </svg>
+      `;
+    }
+    
+    // Re-agregar el listener después de modificar el HTML
+    setTimeout(() => {
+      agregarListenerDirecto();
+    }, 100);
+  });
+}
+
+// Wait for DOM to load o ejecutar inmediatamente si ya está cargado
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', () => {
+    configurarBotonPerfil();
+    agregarListenerDirecto();
+  });
+} else {
+  // DOM ya está cargado
+  configurarBotonPerfil();
+  agregarListenerDirecto();
+}
+
+// También intentar después de un pequeño delay por si acaso
+setTimeout(() => {
+  agregarListenerDirecto();
+}, 500);
+
+// NOTA: La configuración del botón de Google ahora se maneja directamente en login.html
+// Este código se eliminó para evitar conflictos - el botón de Google solo existe en login.html
+
 const productos=[{
     id:1,
     nombre:"Boca juniors Conjunto",
@@ -518,10 +666,7 @@ const productos=[{
 // style.display = mostrar u ocultar elementos
     // Ejecutar la función
     // registroYVerificacion();
-    // // CARRRITO PROXIMAMENTE
-    let carrito=[]
-    let total=0
-    
+
 
 const lupa_boton = document.querySelector(".btn-lupa");
 const buscador_input = document.querySelector(".Buscador");
@@ -677,3 +822,12 @@ form.addEventListener('submit', function(event) {
             btn.disabled = false; 
         });
 });
+    // // CARRRITO PROXIMAMENTE
+    let carrito=[];
+    let total=0;
+    
+    function agregado_carrito(){
+        let agregado=document.querySelector("btn-cards");
+    agregado.textContent="Agregado al carrito"
+
+    }
