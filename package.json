@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm install && vite build"
+    "build": "chmod +x ./node_modules/.bin/vite && vite build"
   },
   "dependencies": {
     "firebase": "^12.5.0"
