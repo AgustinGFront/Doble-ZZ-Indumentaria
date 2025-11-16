@@ -159,7 +159,7 @@ const productos=[{
     nombre:"Boca Juniors Mangalarga",
     categoria: "Primera Division",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 },
@@ -176,7 +176,7 @@ const productos=[{
     nombre:"Boca Juniors Mangalarga azul",
     categoria: "Primera Division",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
 },
 {
@@ -184,7 +184,7 @@ const productos=[{
     nombre:"River Mangalarga",
     categoria: "Primera Division",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 },
@@ -201,7 +201,7 @@ const productos=[{
     nombre:"River Plate Mangalarga blanca",
     categoria: "Primera Division",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 },
@@ -250,7 +250,7 @@ const productos=[{
     nombre:"Central Cordoba Mangalarga",
     categoria: "Primera Division",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 },
@@ -284,7 +284,7 @@ const productos=[{
     nombre:"Gimnasia Mangalarga",
     categoria: "Primera Division",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 }
@@ -348,7 +348,7 @@ const productos=[{
     nombre:"Chaco For Ever Mangalarga",
     categoria: "Ascenso",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 }
@@ -358,7 +358,7 @@ const productos=[{
     nombre:"Chacarita Mangalarga",
     categoria: "Ascenso",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL" 
 }
 ,
@@ -367,7 +367,7 @@ const productos=[{
     nombre:"Quilmes Mangalarga",
     categoria: "Ascenso",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 }
@@ -395,7 +395,7 @@ const productos=[{
     nombre:"Argentina Mangalarga",
     categoria: "Selecciones",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 }
@@ -580,7 +580,7 @@ const productos=[{
     nombre:"Los Pibes De Fiorito Mangalarga",
     categoria: "Influencers",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 }
@@ -616,7 +616,7 @@ const productos=[{
     nombre:"Team Nene Mangalarga",
     categoria: "Influencers",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
     
 }
@@ -636,7 +636,7 @@ const productos=[{
     nombre:"MDS Mangalarga",
     categoria: "Influencers",
     estilo:"Mangalarga",
-    precio:14000,
+    precio:10000,
     talles:"M,L,XL,XXL"
   
 },
@@ -652,20 +652,163 @@ const productos=[{
     nombre:"Brasil Mangalarga",
     categoria: "Selecciones",
     estilo:"Mangalarga",
+    precio:10000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:58,
+    nombre:"Conjunto Brasil",
+    categoria: "Selecciones",
     precio:14000,
     talles:"M,L,XL,XXL"
 }
+,
+{
+   id:59,
+    nombre:"Conjunto Argentina",
+    categoria: "Selecciones",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:60,
+    nombre:"Conjunto Italia",
+    categoria: "Selecciones",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:61,
+    nombre:"Conjunto Independiente",
+    categoria: "Primera Division",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:62,
+    nombre:"Conjunto Boca Juniors",
+    categoria: "Primera Division",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:63,
+    nombre:"Conjunto Chelsea",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:64,
+    nombre:"Conjunto Colon",
+    categoria: "Ascenso",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:65,
+    nombre:"Conjunto Bayern Leverkusen",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:66,
+    nombre:"Conjunto Italia",
+    categoria: "Selecciones",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:67,
+    nombre:"Conjunto Racing",
+    categoria: "Primera Division",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:68,
+    nombre:"Conjunto Colombia",
+    categoria: "Selecciones",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:69,
+    nombre:"Conjunto Team Nene",
+    categoria: "Influencers",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:70,
+    nombre:"Conjunto Roma",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:71,
+    nombre:"Conjunto Dortmund",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:72,
+    nombre:"Conjunto Milan",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:73,
+    nombre:"Conjunto Atletico Negra",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:74,
+    nombre:"Conjunto River Plate Camisa",
+    categoria: "Primera Division",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:75,
+    nombre:"Conjunto Napoli",
+    categoria: "Europa",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:76,
+    nombre:"Conjunto Chicago",
+    categoria: "Ascenso",
+    precio:14000,
+    talles:"M,L,XL,XXL"
+}
+
 ]
-// querySelector() = busca UN elemento en el HTML
-// querySelectorAll() = busca TODOS los elementos que coincidan
-// addEventListener() = "escucha" cuando pasa algo (click, escribir, etc.)
-// forEach() = recorre un array o lista uno por uno
-// includes() = verifica si un texto contiene otro texto
-// style.display = mostrar u ocultar elementos
-    // Ejecutar la función
-    // registroYVerificacion();
-
-
 const lupa_boton = document.querySelector(".btn-lupa");
 const buscador_input = document.querySelector(".Buscador");
 
@@ -861,7 +1004,8 @@ function agregarAlCarrito(e) {
         id: boton.dataset.id,
         nombre: boton.dataset.nombre,
         precio: parseFloat(boton.dataset.precio),
-        cantidad: 1
+        cantidad: 1,
+        imagen: boton.dataset.imagen,
     };
     
     // Buscamos si el producto ya está en el carrito
@@ -884,9 +1028,11 @@ function agregarAlCarrito(e) {
 }
 
 /**
- * Dibuja los productos en la interfaz (el modal).
  */
 function renderizarCarrito() {
+    if (!listaCarrito) {
+        return; 
+    }
     // 1. Limpiamos el HTML anterior
     listaCarrito.innerHTML = '';
     
@@ -903,6 +1049,7 @@ function renderizarCarrito() {
       const li = document.createElement('li');
         li.className = 'flex justify-between items-center py-4';
         li.innerHTML = `
+<img src="${item.imagen}" alt="${item.nombre}" class="w-16 h-16 object-cover rounded-md border">
             <span class="text-gray-700">${item.nombre} (x${item.cantidad})</span>
             <span class="font-bold text-gray-900">$${subtotal.toFixed(2)}</span>
             <button class="btn-eliminar-item text-red-500 hover:text-red-700" data-id="${item.id}">
@@ -1168,6 +1315,75 @@ function inicializarAplicacion() {
         enlazarBotonesAgregar();
         
         // 1.4 Asignar eventos a la interfaz (abrir/cerrar modal, eliminar)
-     enlazarEventosInterfaz();
-         configurarFiltros(); 
+    enlazarEventosInterfaz();
+        configurarFiltros(); 
     }
+
+            // Toggle password visibility
+        const togglePassword = document.getElementById('toggle-password');
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eye-icon');
+
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            eyeIcon.classList.toggle('fa-eye');
+            eyeIcon.classList.toggle('fa-eye-slash');
+        });
+
+        // Toggle confirm password visibility
+        const togglePasswordConfirm = document.getElementById('toggle-password-confirm');
+        const passwordConfirmInput = document.getElementById('password-confirm');
+        const eyeIconConfirm = document.getElementById('eye-icon-confirm');
+
+        togglePasswordConfirm.addEventListener('click', () => {
+            const type = passwordConfirmInput.type === 'password' ? 'text' : 'password';
+            passwordConfirmInput.type = type;
+            eyeIconConfirm.classList.toggle('fa-eye');
+            eyeIconConfirm.classList.toggle('fa-eye-slash');
+        });
+
+        // Validación del formulario
+        const form2 = document.getElementById('form-registro');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const password = passwordInput.value;
+            const passwordConfirm = passwordConfirmInput.value;
+            const terminos = document.getElementById('terminos').checked;
+            
+            // Validar longitud de contraseña
+            if (password.length < 6) {
+                alert('La contraseña debe tener al menos 6 caracteres');
+                return;
+            }
+            
+            // Validar que las contraseñas coincidan
+            if (password !== passwordConfirm) {
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+            
+            // Validar términos y condiciones
+            if (!terminos) {
+                alert('Debes aceptar los términos y condiciones');
+                return;
+            }
+            
+            // Aquí iría la lógica de registro (Firebase, etc.)
+            alert('¡Cuenta creada exitosamente! (Aquí se conectaría con Firebase)');
+            
+            // Redirigir al login o al home
+            // window.location.href = './login.html';
+        });
+
+        // Menú móvil
+        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }

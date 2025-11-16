@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Doble ZZ</title>
+    <link rel="icon" type="image/png" href="../assets/favicon_io/favicon-32x32.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="relative bg-blue-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <!-- Botón Hamburguesa (Móvil) -->
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <button type="button"
+                            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Abrir menú</span>
+                            <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Logo + Menú DESKTOP -->
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex shrink-0 items-center">
+                            <img src="../assets/images/dvle.png" alt="Logo Doble ZZ" class="h-8 w-auto" />
+                        </div>
+
+                        <!-- MENÚ DESKTOP -->
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <a href="../index.html"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Inicio</a>
+                                <a href="./productos.html"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+                                <a href="./quienesomos.html"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+                                <a href="./info.html"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+                                <a href="./contacto.html"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buscador + Iconos -->
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-2 sm:space-x-4">
+
+                        <!-- Buscador -->
+                        <input
+                            class="Buscador hidden sm:block px-3 py-1 rounded-md bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+                            type="text" placeholder="Buscar...">
+
+                        <!-- Lupa -->
+                        <button
+                            class="btn-lupa p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+                            <span class="sr-only">Buscar</span>
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+
+                        <!-- Carrito -->
+                        <button id="btn-ver-carrito"
+                            class="btn-carrito relative p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+                            <span class="sr-only">Carrito</span>
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span id="cantidad-carrito"
+                                class="contador-carrito absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                        </button>
+
+                        <!-- Perfil -->
+                        <a href="./login.html"
+                            class="btn-perfil p-2 rounded-full text-gray-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white transition">
+                            <span class="sr-only">Perfil</span>
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MENÚ MÓVIL -->
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <a href="../index.html"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Inicio</a>
+                    <a href="./productos.html"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Productos</a>
+                    <a href="./quienesomos.html"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Quienes Somos</a>
+                    <a href="./info.html"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Info</a>
+                    <a href="./contacto.html"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER DESLIZANTE -->
+    <div class="banner-slider-container">
+        <div class="slider-wrapper">
+            <div class="slider-track">
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <h2 class="slider-title">🛍️ Promo mayorista: llevá 10 conjuntos de $14.000 y pagá solo $10.000 c/u 🔥</h2>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-content">
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <h2 class="slider-title">DESCUENTOS EN PRENDAS SELECCIONADAS</h2>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-content">
+                        <h2 class="slider-title">SÍGUENOS EN @doblezz_10</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT - FORMULARIO DE REGISTRO -->
+    <main>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            <!-- Título Principal -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Crear Cuenta</h1>
+                <p class="text-lg text-gray-600">Únete a Doble ZZ y disfruta de beneficios exclusivos</p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+
+                <!-- Formulario de Registro -->
+                <div class="bg-white rounded-lg shadow-md p-8 border border-gray-200">
+                    
+                    <!-- Botón de Google -->
+                    <button id="btn-google-registro"
+                        class="w-full flex items-center justify-center gap-3 bg-white border-2 border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-50 transition duration-300 mb-6">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                        Continuar con Google
+                    </button>
+
+                    <div class="relative mb-6">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-4 bg-white text-gray-500">O continúa con email</span>
+                        </div>
+                    </div>
+
+                    <form id="form-registros" class="space-y-6">
+
+                        <!-- Nombre Completo -->
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fa-solid fa-user text-blue-800 mr-2"></i>Nombre completo *
+                            </label>
+                            <input type="text" id="nombre" name="nombre" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                                placeholder="Juan Pérez">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fa-solid fa-envelope text-blue-800 mr-2"></i>Correo Electrónico *
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                                placeholder="tu@email.com">
+                        </div>
+
+                        <!-- Contraseña -->
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fa-solid fa-lock text-blue-800 mr-2"></i>Contraseña *
+                            </label>
+                            <div class="relative">
+                                <input type="password" id="password" name="password" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                                    placeholder="Mínimo 6 caracteres">
+                                <button type="button" id="toggle-password"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">
+                                    <i class="fa-solid fa-eye" id="eye-icon"></i>
+                                </button>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Debe tener al menos 6 caracteres</p>
+                        </div>
+
+                        <!-- Confirmar Contraseña -->
+                        <div>
+                            <label for="password-confirm" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fa-solid fa-lock text-blue-800 mr-2"></i>Confirmar Contraseña *
+                            </label>
+                            <div class="relative">
+                                <input type="password" id="password-confirm" name="password-confirm" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                                    placeholder="Repite tu contraseña">
+                                <button type="button" id="toggle-password-confirm"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">
+                                    <i class="fa-solid fa-eye" id="eye-icon-confirm"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono (Opcional) -->
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fa-solid fa-phone text-blue-800 mr-2"></i>Teléfono (Opcional)
+                            </label>
+                            <input type="tel" id="telefono" name="telefono"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-transparent"
+                                placeholder="+54 11 1234-5678">
+                        </div>
+
+                        <!-- Términos y Condiciones -->
+                        <div class="flex items-start">
+                            <input type="checkbox" id="terminos" name="terminos" required
+                                class="mt-1 h-4 w-4 text-blue-800 border-gray-300 rounded focus:ring-blue-800">
+                            <label for="terminos" class="ml-2 text-sm text-gray-600">
+                                Acepto los <a href="./info.html" class="text-blue-800 hover:underline">términos y condiciones</a> 
+                                y la <a href="./info.html" class="text-blue-800 hover:underline">política de privacidad</a> *
+                            </label>
+                        </div>
+
+                        <!-- Recibir Promociones -->
+                        <div class="flex items-start">
+                            <input type="checkbox" id="promociones" name="promociones"
+                                class="mt-1 h-4 w-4 text-blue-800 border-gray-300 rounded focus:ring-blue-800">
+                            <label for="promociones" class="ml-2 text-sm text-gray-600">
+                                Quiero recibir ofertas y promociones por email
+                            </label>
+                        </div>
+
+                        <!-- Botón Submit -->
+                        <button type="submit"
+                            class="w-full bg-blue-800/50 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            <i class="fa-solid fa-user-plus mr-2"></i>Crear Cuenta
+                        </button>
+
+                    </form>
+
+                    <!-- Link a Login -->
+                    <div class="mt-6 text-center">
+                        <p class="text-sm text-gray-600">
+                            ¿Ya tienes cuenta? 
+                            <a href="./login.html" class="text-blue-800 font-semibold hover:underline">Inicia sesión aquí</a>
+                        </p>
+                    </div>
+
+                    <!-- Volver a la tienda -->
+                    <div class="mt-4 text-center">
+                        <a href="../index.html" class="text-sm text-gray-500 hover:text-gray-700">
+                            <i class="fa-solid fa-arrow-left mr-1"></i>Volver a la tienda
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-12">
+        <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+                <!-- Columna izquierda -->
+                <div class="space-y-8">
+                    <img src="../assets/images/dvle.png" alt="Logo" class="h-13">
+                    <p class="text-b leading-6 text-white">
+                        Ropa de potrero, corazón de cancha
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.instagram.com/doblezz_10?igsh=MnY4c21hMXY4MmJm&utm_source=qr"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@doblezz_10?_t=ZM-8zX5tKaIrrU&_r=1"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                            class="icon-footer hover:text-gray-300" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna derecha (Menú + Contacto) -->
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:mt-0">
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6">Menu</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li><a href="../index.html" class="text-sm leading-6 hover:text-white">Inicio</a></li>
+                            <li><a href="./productos.html" class="text-sm leading-6 hover:text-white">Productos</a></li>
+                            <li><a href="./quienesomos.html" class="text-sm leading-6 hover:text-white">Quienes Somos</a></li>
+                            <li><a href="./info.html" class="text-sm leading-6 hover:text-white">Info</a></li>
+                            <li><a href="./contacto.html" class="text-sm leading-6 hover:text-white">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-black">Contáctanos</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li>
+                                <a href="https://wa.me/541153381884?text=Hola,%20quiero%20más%20información!"
+                                    class="text-sm leading-6 text-black hover:text-white" target="_blank">
+                                    +54 11 5338-1884
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:Gomezzapatajulian03@gmail.com"
+                                    class="text-sm leading-6 text-black hover:text-white">
+                                    Gomezzapatajulian03@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 border-t border-black pt-8">
+                <p class="text-sm leading-5 text-white">&copy; 2025 Doble zz, Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Tu script principal -->
+    <script type="module" src="../script.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

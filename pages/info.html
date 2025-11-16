@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doble ZZ</title>
+        <link rel="icon" type="image/png" href="../assets/favicon_io/favicon-32x32.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -306,7 +307,6 @@
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-900">Transferencia Bancaria</h3>
-                                    <p class="text-sm text-green-600 font-semibold">Descuento 5%</p>
                                 </div>
                             </div>
                             <p class="text-gray-600 mb-4">Realizá tu transferencia y obtené un descuento adicional</p>
@@ -455,6 +455,39 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script type="module" src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            function switchTab(tabName) {
+                contentSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                tabButtons.forEach(button => {
+                    button.classList.remove('active', 'bg-blue-800/50', 'text-white');
+                    button.classList.add('bg-gray-100', 'text-gray-700');
+                });
+                const targetSection = document.getElementById(tabName + '-content');
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+                const activeButton = document.querySelector('[data-tab="' + tabName + '"]');
+                if (activeButton) {
+                    activeButton.classList.add('active', 'bg-blue-800/50', 'text-white');
+                    activeButton.classList.remove('bg-gray-100', 'text-gray-700');
+                }
+            }
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    switchTab(tabName);
+                });
+            });
+            
+            switchTab('talles');
+        });
+    </script>
 </body>
 
 </html>
