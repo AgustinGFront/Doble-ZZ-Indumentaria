@@ -659,5 +659,91 @@ export const productos=[{
     precio:14000,
     talles:"M,L,XL,XXL"
 }
+,
+{
+   id:77,
+    nombre:"Conjunto  Sacachispas",
+    categoria: "Ascenso",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:78,
+    nombre:"Conjunto  Defensa y Justicia",
+    categoria: "Ascenso",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:79,
+    nombre:"Conjunto  Riestra",
+    categoria: "Primera Division",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:80,
+    nombre:"Conjunto  Independiente",
+    categoria: "Primera Division",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:81,
+    nombre:"Conjunto  San Telmo",
+    categoria: "Ascenso",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:82,
+    nombre:"Conjunto  Central Norte",
+    categoria: "Ascenso",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+}
+,
+{
+   id:83,
+    nombre:"Conjunto  Boca Juniors",
+    categoria: "Primera division",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+
+}
+,
+{
+   id:84,
+    nombre:"Conjunto  Chacarita",
+    categoria: "Ascenso",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+
+}
+,
+{
+   id:85,
+    nombre:"Conjunto  River",
+    categoria: "Primera Division",
+    precio:14000,
+   estilo:"Musculosa",
+    talles:"M,L,XL,XXL"
+
+}
+
+
 
 ]
