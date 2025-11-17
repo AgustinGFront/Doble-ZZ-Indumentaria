@@ -39,10 +39,24 @@ p {
 }
 
 .Buscador {
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 8px;
-    width: 100%;
-    max-width: 200px;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.Buscador::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+.Buscador:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .footer-menu {
@@ -194,6 +208,26 @@ p {
         transform: translateX(-100%);
     }
 }
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* PRODUCTOS DESTACADOS */
 .productos-destacados {
@@ -268,7 +302,6 @@ p {
     color: #999;
     text-decoration: line-through;
 }
-
 .precio-oferta {
     font-size: 18px;
     font-weight: bold;
@@ -333,551 +366,671 @@ p {
     margin-bottom: 15px;
 }
 
-/* NAVBAR MOBILE FIXES */
+/* ESTILOS DEL BUSCADOR */
+/* Ocultar por defecto en móvil/tablet */
+/* ============================================
+   ESTILOS DEL BUSCADOR - DEBE IR PRIMERO
+   ============================================ */
+
+/* Ocultar por defecto en móvil/tablet */
 @media (max-width: 1023px) {
-    /* Ocultar menú desktop */
-    nav .hidden.sm\:ml-6.sm\:block {
-        display: none !important;
-    }
-    
-    /* Mostrar botón hamburguesa */
-    nav .sm\:hidden {
-        display: flex !important;
-    }
-    
-    /* Ajustar espaciado de íconos en mobile/tablet */
-    nav .space-x-2 {
-        gap: 4px !important;
-    }
-    
-    nav .sm\:space-x-4 {
-        gap: 6px !important;
-    }
-    
-    /* Reducir tamaño de botones en móvil */
-    .btn-lupa,
-    .btn-carrito,
-    .btn-perfil {
-        padding: 6px !important;
-    }
-    
-    .btn-lupa svg,
-    .btn-carrito svg,
-    .btn-perfil svg {
-        width: 20px !important;
-        height: 20px !important;
-    }
-    
-    /* Ocultar input buscador en mobile/tablet */
-    .Buscador {
-        display: none !important;
-    }
+  /* Ocultar por defecto */
+  .Buscador {
+    display: none !important;
+  }
+  
+  /* Cuando está visible con clase .block */
+  .Buscador.block {
+    display: block !important;
+    position: fixed !important;
+    top: 70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100vw - 40px) !important;
+    max-width: 500px !important;
+    z-index: 1000 !important;
+    margin: 0 !important;
+    background: linear-gradient(135deg, rgba(107, 143, 197, 0.98) 0%, rgba(138, 148, 198, 0.98) 100%);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Overlay oscuro cuando está abierto el buscador */
+  body.search-active::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+  }
 }
+
+/* Mostrar siempre en desktop */
+@media (min-width: 1024px) {
+  .Buscador {
+    display: block !important;
+    position: relative !important;
+    width: 220px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.12);
+    font-size: 15px;
+  }
+
+  .Buscador:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+/* ============================================
+   NAVBAR MOBILE FIXES
+   ============================================ */
+
+@media (max-width: 1023px) {
+   /* Asegurar espacio en el navbar */
+  nav .absolute.inset-y-0.right-0 {
+    position: relative !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  /* Botones más compactos */
+  .btn-lupa,
+  .btn-carrito,
+  .btn-perfil {
+    padding: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-lupa:active,
+  .btn-carrito:active,
+  .btn-perfil:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-lupa svg,
+  .btn-carrito svg,
+  .btn-perfil svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Destacar botón lupa cuando está activo */
+  .btn-lupa.active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
 
 /* Tablet específico (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .btn-lupa,
-    .btn-carrito,
-    .btn-perfil {
-        padding: 8px !important;
-    }
-    
-    .btn-lupa svg,
-    .btn-carrito svg,
-    .btn-perfil svg {
-        width: 22px !important;
-        height: 22px !important;
-    }
-    
-    nav .space-x-2 {
-        gap: 8px !important;
-    }
+ nav .absolute.inset-y-0.right-0 {
+    gap: 10px;
+  }
+  
+  .btn-lupa,
+  .btn-carrito,
+  .btn-perfil {
+    padding: 9px;
+  }
+  
+  .btn-lupa svg,
+  .btn-carrito svg,
+  .btn-perfil svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Mobile pequeño ajustes extra */
 @media (max-width: 479px) {
-    nav .relative.flex.h-16 {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-    
-    .btn-lupa,
-    .btn-carrito,
-    .btn-perfil {
-        padding: 5px !important;
-    }
-    
-    .btn-lupa svg,
-    .btn-carrito svg,
-    .btn-perfil svg {
-        width: 18px !important;
-        height: 18px !important;
-    }
-    
-    nav .space-x-2 {
-        gap: 2px !important;
-    }
-    
-    /* Logo más pequeño en mobile */
-    nav img[alt="Logo Doble ZZ"] {
-        height: 28px !important;
-    }
+  nav .relative.flex.h-16 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .btn-lupa,
+  .btn-carrito,
+  .btn-perfil {
+    padding: 5px;
+  }
+  
+  .btn-lupa svg,
+  .btn-carrito svg,
+  .btn-perfil svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  nav .space-x-2 {
+    gap: 2px;
+  }
+  
+  /* Logo más pequeño en mobile */
+  nav img[alt="Logo Doble ZZ"] {
+    height: 28px;
+  }
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* ============================================
+   RESPONSIVE BREAKPOINTS - RESTO DE LA PÁGINA
+   ============================================ */
 
 /* Desktop Grande (1200px+) */
 @media (min-width: 1200px) {
-    .container-fluid {
-        height: 600px;
-    }
+  .container-fluid {
+    height: 600px;
+  }
 
-    .bg-text {
-        font-size: 100px;
-    }
+  .bg-text {
+    font-size: 100px;
+  }
 
-    .bg-subtittle {
-        font-size: 20px;
-    }
+  .bg-subtittle {
+    font-size: 20px;
+  }
 
-    .grid-productos {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .grid-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    .imagen-container {
-        height: 300px;
-    }
+  .imagen-container {
+    height: 300px;
+  }
 }
 
 /* Desktop Mediano (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
-    .container-fluid {
-        height: 550px;
-    }
+  .container-fluid {
+    height: 550px;
+  }
 
-    .bg-text {
-        font-size: 80px;
-    }
+  .bg-text {
+    font-size: 80px;
+  }
 
-    .bg-subtittle {
-        font-size: 18px;
-    }
+  .bg-subtittle {
+    font-size: 18px;
+  }
 
-    .grid-productos {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .grid-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .imagen-container {
-        height: 280px;
-    }
+  .imagen-container {
+    height: 280px;
+  }
 }
 
 /* Tablet Grande (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-    .container-fluid {
-        height: 450px;
-    }
+  .container-fluid {
+    height: 450px;
+  }
 
-    .bg-text {
-        font-size: 60px;
-    }
+  .bg-text {
+    font-size: 60px;
+  }
 
-    .bg-subtittle {
-        font-size: 16px;
-    }
+  .bg-subtittle {
+    font-size: 16px;
+  }
 
-    .grid-productos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-    }
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
 
-    .imagen-container {
-        height: 250px;
-    }
+  .imagen-container {
+    height: 250px;
+  }
 
-    .icon-footer {
-        font-size: 26px;
-    }
+  .icon-footer {
+    font-size: 26px;
+  }
 
-    .Buscador {
-        font-size: 18px;
-    }
+  .productos-destacados {
+    padding: 35px 18px;
+  }
 
-    .productos-destacados {
-        padding: 35px 18px;
-    }
-
-    .titulo-seccion {
-        font-size: 28px;
-    }
+  .titulo-seccion {
+    font-size: 28px;
+  }
 }
 
 /* Tablet Pequeña (576px - 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
-    .container-fluid {
-        height: 400px;
-    }
+  .container-fluid {
+    height: 400px;
+  }
 
-    .bg-text {
-        font-size: 48px;
-    }
+  .bg-text {
+    font-size: 48px;
+  }
 
-    .bg-subtittle {
-        font-size: 15px;
-    }
+  .bg-subtittle {
+    font-size: 15px;
+  }
 
-    .grid-productos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 
-    .imagen-container {
-        height: 220px;
-    }
+  .imagen-container {
+    height: 220px;
+  }
 
-    .icon-footer {
-        font-size: 24px;
-    }
+  .icon-footer {
+    font-size: 24px;
+  }
 
-    .Buscador {
-        font-size: 16px;
-        max-width: 180px;
-    }
+  .productos-destacados {
+    padding: 30px 15px;
+  }
 
-    .productos-destacados {
-        padding: 30px 15px;
-    }
+  .titulo-seccion {
+    font-size: 26px;
+  }
 
-    .titulo-seccion {
-        font-size: 26px;
-    }
-
-    .care-card, .payment-method {
-        padding: 16px;
-    }
+  .care-card, .payment-method {
+    padding: 16px;
+  }
 }
 
 /* Móvil Grande (480px - 575px) */
 @media (min-width: 480px) and (max-width: 575px) {
-    .container-fluid {
-        height: 350px;
-    }
+  .container-fluid {
+    height: 350px;
+  }
 
-    .bg-text {
-        font-size: 38px;
-    }
+  .bg-text {
+    font-size: 38px;
+  }
 
-    .bg-subtittle {
-        font-size: 14px;
-    }
+  .bg-subtittle {
+    font-size: 14px;
+  }
 
-    .banner-slider-container {
-        padding: 6px 0;
-    }
+  .banner-slider-container {
+    padding: 6px 0;
+  }
 
-    .slider-item {
-        padding: 6px 15px;
-    }
+  .slider-item {
+    padding: 6px 15px;
+  }
 
-    .slider-title {
-        font-size: 0.75rem;
-    }
+  .slider-title {
+    font-size: 0.75rem;
+  }
 
-    .grid-productos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 
-    .imagen-container {
-        height: 180px;
-    }
+  .imagen-container {
+    height: 180px;
+  }
 
-    .producto-info {
-        padding: 15px;
-    }
+  .producto-info {
+    padding: 15px;
+  }
 
-    .producto-nombre {
-        font-size: 15px;
-    }
+  .producto-nombre {
+    font-size: 15px;
+  }
 
-    .producto-descripcion {
-        font-size: 13px;
-    }
+  .producto-descripcion {
+    font-size: 13px;
+  }
 
-    .btn-comprar, .btn-cards {
-        padding: 10px;
-        font-size: 13px;
-    }
+  .btn-comprar, .btn-cards {
+    padding: 10px;
+    font-size: 13px;
+  }
 
-    .productos-destacados {
-        padding: 25px 12px;
-    }
+  .productos-destacados {
+    padding: 25px 12px;
+  }
 
-    .titulo-seccion {
-        font-size: 24px;
-    }
+  .titulo-seccion {
+    font-size: 24px;
+  }
 
-    .icon-footer {
-        font-size: 22px;
-    }
+  .icon-footer {
+    font-size: 22px;
+  }
 
-    .care-card, .payment-method {
-        padding: 14px;
-    }
+  .care-card, .payment-method {
+    padding: 14px;
+  }
 }
 
 /* Móvil Mediano (400px - 479px) */
 @media (min-width: 400px) and (max-width: 479px) {
-    .container-fluid {
-        height: 320px;
-    }
+  .container-fluid {
+    height: 320px;
+  }
 
-    .bg-text {
-        font-size: 32px;
-        padding: 0 15px;
-    }
+  .bg-text {
+    font-size: 32px;
+    padding: 0 15px;
+  }
 
-    .bg-subtittle {
-        font-size: 13px;
-        padding: 0 15px;
-    }
+  .bg-subtittle {
+    font-size: 13px;
+    padding: 0 15px;
+  }
 
-    .slider-item {
-        padding: 5px 12px;
-    }
+  .slider-item {
+    padding: 5px 12px;
+  }
 
-    .slider-title {
-        font-size: 0.7rem;
-    }
+  .slider-title {
+    font-size: 0.7rem;
+  }
 
-    .grid-productos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 
-    .imagen-container {
-        height: 160px;
-    }
+  .imagen-container {
+    height: 160px;
+  }
 
-    .producto-info {
-        padding: 12px;
-    }
+  .producto-info {
+    padding: 12px;
+  }
 
-    .producto-nombre {
-        font-size: 14px;
-    }
+  .producto-nombre {
+    font-size: 14px;
+  }
 
-    .producto-descripcion {
-        font-size: 12px;
-    }
+  .producto-descripcion {
+    font-size: 12px;
+  }
 
-    .btn-comprar, .btn-cards {
-        padding: 9px;
-        font-size: 12px;
-    }
+  .btn-comprar, .btn-cards {
+    padding: 9px;
+    font-size: 12px;
+  }
 
-    .productos-destacados {
-        padding: 20px 10px;
-    }
+  .productos-destacados {
+    padding: 20px 10px;
+  }
 
-    .titulo-seccion {
-        font-size: 22px;
-        margin-bottom: 30px;
-    }
+  .titulo-seccion {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
 
-    .icon-footer {
-        font-size: 20px;
-    }
+  .icon-footer {
+    font-size: 20px;
+  }
 
-    .footer-menu {
-        text-align: left;
-    }
+  .footer-menu {
+    text-align: left;
+  }
 
-    .care-card, .payment-method {
-        padding: 12px;
-    }
+  .care-card, .payment-method {
+    padding: 12px;
+  }
 }
 
 /* Móvil Pequeño (360px - 399px) */
 @media (min-width: 360px) and (max-width: 399px) {
-    .container-fluid {
-        height: 280px;
-    }
+  .container-fluid {
+    height: 280px;
+  }
 
-    .bg-text {
-        font-size: 28px;
-        padding: 0 10px;
-    }
+  .bg-text {
+    font-size: 28px;
+    padding: 0 10px;
+  }
 
-    .bg-subtittle {
-        font-size: 12px;
-        padding: 0 10px;
-    }
+  .bg-subtittle {
+    font-size: 12px;
+    padding: 0 10px;
+  }
 
-    .slider-item {
-        padding: 5px 10px;
-    }
+  .slider-item {
+    padding: 5px 10px;
+  }
 
-    .slider-title {
-        font-size: 0.65rem;
-    }
+  .slider-title {
+    font-size: 0.65rem;
+  }
 
-    .grid-productos {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+  .grid-productos {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
-    .imagen-container {
-        height: 200px;
-    }
+  .imagen-container {
+    height: 200px;
+  }
 
-    .producto-info {
-        padding: 12px;
-    }
+  .producto-info {
+    padding: 12px;
+  }
 
-    .producto-nombre {
-        font-size: 14px;
-    }
+  .producto-nombre {
+    font-size: 14px;
+  }
 
-    .producto-descripcion {
-        font-size: 12px;
-    }
+  .producto-descripcion {
+    font-size: 12px;
+  }
 
-    .precio-oferta {
-        font-size: 16px;
-    }
+  .precio-oferta {
+    font-size: 16px;
+  }
 
-    .btn-comprar, .btn-cards {
-        padding: 10px;
-        font-size: 13px;
-    }
+  .btn-comprar, .btn-cards {
+    padding: 10px;
+    font-size: 13px;
+  }
 
-    .productos-destacados {
-        padding: 18px 10px;
-    }
+  .productos-destacados {
+    padding: 18px 10px;
+  }
 
-    .titulo-seccion {
-        font-size: 20px;
-        margin-bottom: 25px;
-    }
+  .titulo-seccion {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
 
-    .icon-footer {
-        font-size: 20px;
-    }
+  .icon-footer {
+    font-size: 20px;
+  }
 
-    .Buscador {
-        font-size: 14px;
-        max-width: 150px;
-    }
-
-    .care-card, .payment-method {
-        padding: 12px;
-    }
+  .care-card, .payment-method {
+    padding: 12px;
+  }
 }
 
 /* Móvil Muy Pequeño (menos de 360px) */
 @media (max-width: 359px) {
-    .container-fluid {
-        height: 250px;
-    }
+  .container-fluid {
+    height: 250px;
+  }
 
-    .bg-text {
-        font-size: 24px;
-        padding: 0 8px;
-    }
+  .bg-text {
+    font-size: 24px;
+    padding: 0 8px;
+  }
 
-    .bg-subtittle {
-        font-size: 11px;
-        padding: 0 8px;
-    }
+  .bg-subtittle {
+    font-size: 11px;
+    padding: 0 8px;
+  }
 
-    .slider-item {
-        padding: 4px 8px;
-    }
+  .slider-item {
+    padding: 4px 8px;
+  }
 
-    .slider-title {
-        font-size: 0.6rem;
-    }
+  .slider-title {
+    font-size: 0.6rem;
+  }
 
-    .grid-productos {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
+  .grid-productos {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 
-    .imagen-container {
-        height: 180px;
-    }
+  .imagen-container {
+    height: 180px;
+  }
 
-    .producto-info {
-        padding: 10px;
-    }
+  .producto-info {
+    padding: 10px;
+  }
 
-    .producto-nombre {
-        font-size: 13px;
-    }
+  .producto-nombre {
+    font-size: 13px;
+  }
 
-    .producto-descripcion {
-        font-size: 11px;
-    }
+  .producto-descripcion {
+    font-size: 11px;
+  }
 
-    .precio-oferta {
-        font-size: 15px;
-    }
+  .precio-oferta {
+    font-size: 15px;
+  }
 
-    .btn-comprar, .btn-cards {
-        padding: 8px;
-        font-size: 12px;
-    }
+  .btn-comprar, .btn-cards {
+    padding: 8px;
+    font-size: 12px;
+  }
 
-    .productos-destacados {
-        padding: 15px 8px;
-    }
+  .productos-destacados {
+    padding: 15px 8px;
+  }
 
-    .titulo-seccion {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
+  .titulo-seccion {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-    .icon-footer {
-        font-size: 18px;
-    }
+  .icon-footer {
+    font-size: 18px;
+  }
 
-    .Buscador {
-        font-size: 13px;
-        max-width: 130px;
-    }
-
-    .care-card, .payment-method {
-        padding: 10px;
-    }
+  .care-card, .payment-method {
+    padding: 10px;
+  }
 }
 
 /* Landscape mode para móviles */
 @media (max-height: 500px) and (orientation: landscape) {
-    .container-fluid {
-        height: 100vh;
-        min-height: 250px;
-    }
+  .container-fluid {
+    height: 100vh;
+    min-height: 250px;
+  }
 
-    .bg-text {
-        font-size: 32px;
-    }
+  .bg-text {
+    font-size: 32px;
+  }
 
-    .bg-subtittle {
-        font-size: 14px;
-    }
+  .bg-subtittle {
+    font-size: 14px;
+  }
 }
 
 /* Ajustes para pantallas touch */
 @media (hover: none) and (pointer: coarse) {
-    .imagen-container:hover .imagen-hover {
-        opacity: 0;
-    }
+  .imagen-container:hover .imagen-hover {
+    opacity: 0;
+  }
 
-    .imagen-container:active .imagen-hover {
-        opacity: 1;
-    }
+  .imagen-container:active .imagen-hover {
+    opacity: 1;
+  }
 
-    .producto-card:hover {
-        transform: none;
-    }}  
+  .producto-card:hover {
+    transform: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Buscador.block {
+    max-width: 600px !important;
+    top: 75px !important;
+    font-size: 16px !important;
+    padding: 12px 16px !important;
+  }
+}
+
+/* Mobile pequeño */
+@media (max-width: 480px) {
+   nav .relative.flex.h-16 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  nav .absolute.inset-y-0.right-0 {
+    gap: 4px;
+  }
+  
+  .btn-lupa,
+  .btn-carrito,
+  .btn-perfil {
+    padding: 7px;
+  }
+  
+  .btn-lupa svg,
+  .btn-carrito svg,
+  .btn-perfil svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Logo más pequeño */
+  nav img[alt="Logo Doble ZZ"] {
+    height: 30px;
+  }
+}
+  .Buscador.block {
+    width: calc(100vw - 30px) !important;
+    max-width: none !important;
+    font-size: 14px !important;
+    padding: 10px 12px !important;
+    top: 65px !important;
+  }
+
+
+/* Mobile muy pequeño */
+@media (max-width: 360px) {
+    nav .relative.flex.h-16 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .btn-lupa,
+  .btn-carrito,
+  .btn-perfil {
+    padding: 6px;
+  }
+  
+  .btn-lupa svg,
+  .btn-carrito svg,
+  .btn-perfil svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  nav img[alt="Logo Doble ZZ"] {
+    height: 26px;
+  }
+}
+  .Buscador.block {
+    width: calc(100vw - 24px) !important;
+    font-size: 14px !important;
+    padding: 9px 11px !important;
+    top: 64px !important;
+  }
+
