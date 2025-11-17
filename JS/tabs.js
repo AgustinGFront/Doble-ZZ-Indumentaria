@@ -1,6 +1,4 @@
-// js/tabs.js
 
-// 1. Exportamos la función principal que llamará main.js
 export function inicializarTabs() {
 
   // 2. Selectores (los movemos adentro)
@@ -40,8 +38,6 @@ export function inicializarTabs() {
       switchTab(tabName);
     });
   });
-  
-  // 5. Iniciar en la pestaña por defecto
   switchTab('talles');
 
-} // <-- 6. Cierre de la función "inicializarTabs"
+}

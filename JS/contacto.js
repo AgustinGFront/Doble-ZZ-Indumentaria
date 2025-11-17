@@ -1,9 +1,9 @@
-// 1. Exportamos la función principal que llamará main.js
+
 export function inicializarContacto() {
 
   // SECCION CONTACTO CON EMAILJS
 
-  // 2. "If Guard" (Tu código ya lo tenía, ¡perfecto!)
+  //"If Guard" 
   // Primero, intentamos encontrar el formulario de contacto
   const form = document.getElementById('form-contacto');
 
@@ -24,7 +24,7 @@ export function inicializarContacto() {
 
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
         .then(() => {
-          // ✅ Éxito: reemplaza el contenido del formulario
+          //  Éxito: reemplaza el contenido del formulario
           form.innerHTML = `
             <div class="p-6 text-center">
               <h2 class="text-2xl font-bold mb-4">Envíanos un mensaje</h2>
@@ -46,7 +46,7 @@ export function inicializarContacto() {
         }, (error) => {
           console.error('EmailJS Error:', error);
 
-          // ❌ Error: 
+          //  Error: 
           form.innerHTML = `
             <div class="p-6 text-center">
               <h2 class="text-2xl font-bold mb-4">Envíanos un mensaje</h2>
@@ -74,6 +74,6 @@ export function inicializarContacto() {
         });
     });
 
-  } // Fin del if (form)
+  } 
 
-} // <-- 3. Cierre de la función "inicializarContacto"
+} 

@@ -4,21 +4,20 @@ export function inicializarBuscador() {
   const buscador_input = document.querySelector(".Buscador");
   
   if (!buscador_input) {
-    return; // No hay buscador en esta página
+    return; 
   }
 
-  // ============================================
-  // DETECTAR SI ESTAMOS EN PRODUCTOS.HTML
-  // ============================================
+
+  //desctecta si estamos en productos.html
   const esPaginaProductos = document.querySelector(".flex-1 .bg-white.border.rounded-lg") !== null;
   
   if (esPaginaProductos) {
-    // ============================================
-    // LÓGICA PARA PRODUCTOS.HTML (búsqueda local)
-    // ============================================
+
+    // lógica para productos.html (búsqueda local)
+
     const todosLosProductos = document.querySelectorAll(".flex-1 .bg-white.border.rounded-lg");
     
-    // NUEVO: Seleccionamos los títulos y líneas de sección
+//Seleccionamos los títulos y líneas de sección
     const titulosSeccion = document.querySelectorAll(".flex-1 > h5");
     const lineasSeccion = document.querySelectorAll(".flex-1 > hr");
 
@@ -90,25 +89,25 @@ export function inicializarBuscador() {
       }
     });
 
-    // Función de búsqueda LOCAL (Modificada)
+    // Función de búsqueda LOCAL
     function buscarProductos(texto) {
       let productosEncontrados = 0;
       const mensajePrevio = document.querySelector("#mensaje-no-encontrado");
       if (mensajePrevio) mensajePrevio.remove();
 
       if (texto === "") {
-        // MODO RESET: Si no hay búsqueda, mostrar todo
+        //  Si no hay búsqueda, mostrar todo
         todosLosProductos.forEach(producto => {
           producto.style.display = "";
         });
-        // NUEVO: Mostrar títulos y líneas
+        // Mostrar títulos y líneas
         titulosSeccion.forEach(titulo => titulo.style.display = "");
         lineasSeccion.forEach(linea => linea.style.display = "");
         return;
       }
 
-      // MODO BÚSQUEDA: Si hay texto, ocultar títulos y líneas
-      // NUEVO: Ocultar títulos y líneas
+      //  Si hay texto, ocultar títulos y líneas
+      //  Ocultar títulos y líneas
       titulosSeccion.forEach(titulo => titulo.style.display = "none");
       lineasSeccion.forEach(linea => linea.style.display = "none");
 
@@ -149,7 +148,7 @@ export function inicializarBuscador() {
         </div>
       `;
       
-      // NUEVO: Insertar el mensaje después del primer grid, no antes (para que no lo oculte la lógica de títulos)
+      //  Insertar el mensaje después del primer grid, no antes (para que no lo oculte la lógica de títulos)
       contenedorGrid.insertAdjacentElement('afterend', mensaje);
     }
 
@@ -165,9 +164,9 @@ export function inicializarBuscador() {
     
     window.limpiarBusqueda = limpiarBusqueda;
 
-  // ============================================
-    // CARGAR BÚSQUEDA DESDE URL (si existe)
-    // ============================================
+ 
+    // cargar búsqueda desde url (si existe)
+
     const params = new URLSearchParams(window.location.search);
      const searchTerm = params.get('search');
 
@@ -177,9 +176,9 @@ export function inicializarBuscador() {
     }
 
   } else {
-    // ============================================
-    // LÓGICA PARA OTRAS PÁGINAS (redirección)
-    // ============================================
+ 
+    // lógica para otras páginas (redirección)
+ 
     
     function redirigirAProductos(textoBusqueda) {
       if (!textoBusqueda || textoBusqueda.trim() === "") {

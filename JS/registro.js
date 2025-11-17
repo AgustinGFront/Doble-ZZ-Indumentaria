@@ -1,78 +1,80 @@
-// js/registro.js
 
-// 1. Exportamos la función principal que llamará main.js
+import { 
+  createUserWithEmailAndPassword, 
+  signInWithPopup,
+  updateProfile // <-- IMPORTANTE: Faltaba importar esto
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+import { auth, googleProvider } from './firebase.js';
+
 export function inicializarRegistro() {
+  const formRegistro = document.getElementById('form-registro'); // Asumo ID del form
+  const btnGoogleRegistro = document.getElementById('btn-google-registro'); // Asumo ID del botón de Google
+  const errorDiv = document.getElementById('registro-error'); // Asumo <div id="registro-error">
 
-  // 2. Selectores (los movemos adentro)
-  const form2 = document.getElementById('form-registro');
-
-  // 3. "IF GUARD" (La comprobación de seguridad)
-  // Si no está el formulario, no estamos en la página de registro.
-  if (!form2) {
-    return; // No hacer nada
+  // --- 1. Listener para el botón de Google ---
+  if (btnGoogleRegistro) {
+    btnGoogleRegistro.addEventListener('click', async () => {
+      try {
+        await signInWithPopup(auth, googleProvider);
+        alert('¡Registro exitoso con Google!');
+        window.location.href = '../index.html';
+      } catch (error) {
+        console.error("Error con Google:", error);
+        alert('Error al registrarse con Google');
+      }
+    });
   }
 
-  // 4. El resto de tu código (se ejecuta solo si pasamos la guardia)
-  const togglePassword = document.getElementById('toggle-password');
-  const passwordInput = document.getElementById('password');
-  const eyeIcon = document.getElementById('eye-icon');
-  
-  const togglePasswordConfirm = document.getElementById('toggle-password-confirm');
-  const passwordConfirmInput = document.getElementById('password-confirm');
-  const eyeIconConfirm = document.getElementById('eye-icon-confirm');
-
-  // Toggle password visibility
-  if (togglePassword) {
-      togglePassword.addEventListener('click', () => {
-          const type = passwordInput.type === 'password' ? 'text' : 'password';
-          passwordInput.type = type;
-          if (eyeIcon) { // Añadimos chequeo por si acaso
-            eyeIcon.classList.toggle('fa-eye');
-            eyeIcon.classList.toggle('fa-eye-slash');
-          }
-      });
-  }
-
-  // Toggle confirm password visibility
-  if (togglePasswordConfirm) {
-      togglePasswordConfirm.addEventListener('click', () => {
-          const type = passwordConfirmInput.type === 'password' ? 'text' : 'password';
-          passwordConfirmInput.type = type;
-          if (eyeIconConfirm) { // Añadimos chequeo por si acaso
-            eyeIconConfirm.classList.toggle('fa-eye');
-            eyeIconConfirm.classList.toggle('fa-eye-slash');
-          }
-      });
-  }
-
-  // Validación del formulario
-  form2.addEventListener('submit', (e) => { 
+  //  Listener para el formulario de Email ---
+  // (Este 'if' se asegura de que solo corra en la pág de registro)
+  if (formRegistro) {
+    formRegistro.addEventListener('submit', async (e) => { 
       e.preventDefault();
       
-      // Obtenemos los valores DENTRO del submit
-      const password = passwordInput.value;
-      const passwordConfirm = passwordConfirmInput.value;
-      const terminos = document.getElementById('terminos').checked;
+      // Asumo que estos son los IDs de tus inputs en registro.html
+      const nombre = document.getElementById('registro-nombre').value; 
+      const email = document.getElementById('registro-email').value;
+      const password = document.getElementById('registro-password').value;
+      const passwordConfirm = document.getElementById('registro-confirm-password').value;
+      const terminos = document.getElementById('terminos').checked; // Asumo ID 'terminos'
       
       if (password.length < 6) {
-          alert('La contraseña debe tener al menos 6 caracteres');
-          return;
+        alert('La contraseña debe tener al menos 6 caracteres');
+        return;
       }
       
       if (password !== passwordConfirm) {
-          alert('Las contraseñas no coinciden');
-          return;
+        alert('Las contraseñas no coinciden');
+        return;
       }
       
       if (!terminos) {
-          alert('Debes aceptar los términos y condiciones');
-          return;
+        alert('Debes aceptar los términos y condiciones');
+        return;
       }
       
-      alert('¡Cuenta creada exitosamente! (Aquí se conectaría con Firebase)');
-      
-      // Redirigir al login o al home
-      // window.location.href = './login.html';
-  });
+      try {
+        // --- Crear usuario en Firebase ---
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
 
-} // <-- 5. Cierre de la función "inicializarRegistro"
+        // --- Guardar el nombre del usuario ---
+        await updateProfile(user, {
+          displayName: nombre
+        });
+        
+        alert('¡Cuenta creada exitosamente!');
+        window.location.href = './login.html'; // Lo mandamos a que inicie sesión
+
+      } catch (error) {
+        console.error("Error al crear cuenta:", error);
+        if (error.code === 'auth/email-already-in-use') {
+          alert('Este correo ya está registrado');
+        } else {
+          alert('Error al crear la cuenta: ' + error.message);
+        }
+      }
+    });
+  } 
+}

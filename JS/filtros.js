@@ -1,22 +1,14 @@
-// js/filtros.js
-
-// 1. ¡IMPORTANTE! Importamos el array de productos
+ //Importamos el array de productos
 import { productos } from './productos.js';
-
-// 2. Exportamos la función principal que llamará main.js
 export function inicializarFiltros() {
 
-  // ============================================
   // SELECTORES DESKTOP
-  // ============================================
   const checksTalles = document.querySelectorAll('.filtro-talle');
   const checksEstilos = document.querySelectorAll('.filtro-estilo');
   const sliderPrecio = document.getElementById('precio-slider');
   const valorPrecio = document.getElementById('precio-valor');
 
-  // ============================================
   // SELECTORES MOBILE
-  // ============================================
   const btnAbrirFiltrosMobile = document.getElementById('btn-abrir-filtros-mobile');
   const btnCerrarFiltrosMobile = document.getElementById('btn-cerrar-filtros-mobile');
   const btnAplicarFiltrosMobile = document.getElementById('btn-aplicar-filtros-mobile');
@@ -30,9 +22,9 @@ export function inicializarFiltros() {
   const sliderPrecioMobile = document.getElementById('precio-slider-mobile');
   const valorPrecioMobile = document.getElementById('precio-valor-mobile');
 
-  // ============================================
+
   // GUARD CLAUSE
-  // ============================================
+
   if (!sliderPrecio && !sliderPrecioMobile) {
     return; // No estamos en la página de productos
   }
@@ -40,13 +32,13 @@ export function inicializarFiltros() {
   // Buscamos TODAS las tarjetas de productos en el HTML
   const todasLasTarjetas = document.querySelectorAll('.flex-1 .bg-white.border.rounded-lg');
 
-  // ============================================
-  // FUNCIONES DE FILTRADO
-  // ============================================
 
-  /**
-   * Función principal que se ejecuta CADA VEZ que un filtro cambia
-   */
+  // FUNCIONES DE FILTRADO
+
+
+
+   // Función principal que se ejecuta CADA VEZ que un filtro cambia
+ 
   function aplicarFiltros() {
     // 1. OBTENER VALORES DE LOS FILTROS (siempre desde desktop)
     const tallesSeleccionados = Array.from(checksTalles)
@@ -77,7 +69,7 @@ export function inicializarFiltros() {
         return; 
       }
 
-      // APLICAR LÓGICA DE FILTROS
+      // LÓGICA DE FILTROS
       const pasaPrecio = dataProducto.precio <= precioMaximo;
       
       let pasaTalles = true;
@@ -119,9 +111,9 @@ export function inicializarFiltros() {
     aplicarFiltros();
   }
 
-  // ============================================
+
   // FUNCIONES MOBILE
-  // ============================================
+
 
   /**
    * Sincronizar filtros mobile con desktop (al abrir el modal)
@@ -233,9 +225,9 @@ export function inicializarFiltros() {
     }
   }
 
-  // ============================================
+
   // EVENT LISTENERS DESKTOP
-  // ============================================
+
 
   // Oyente para cada checkbox de talle
   checksTalles.forEach(check => {
@@ -256,9 +248,9 @@ export function inicializarFiltros() {
     });
   }
 
-  // ============================================
+
   // EVENT LISTENERS MOBILE
-  // ============================================
+
 
   if (btnAbrirFiltrosMobile) {
     btnAbrirFiltrosMobile.addEventListener('click', abrirModalFiltros);
@@ -287,14 +279,11 @@ export function inicializarFiltros() {
     });
   }
 
-  // ============================================
-  // INICIALIZACIÓN
-  // ============================================
 
   // Hacer la función 'limpiarFiltros' global para el botón onclick del HTML
   window.limpiarFiltros = limpiarFiltros;
 
-  // Inicializar contador de filtros
+
   actualizarContadorFiltros();
 
-} // <-- Cierre de la función "inicializarFiltros"
+}

@@ -1,4 +1,3 @@
-// js/main.js
 
 // --- 1. IMPORTACIONES ---
 import { configurarBotonPerfil } from './auth.js';
@@ -8,18 +7,22 @@ import { inicializarFiltros } from './filtros.js';
 import { inicializarContacto } from './contacto.js';
 import { inicializarRegistro } from './registro.js';
 import { inicializarTabs } from './tabs.js';
+import { inicializarLogin } from './login.js';
+import { inicializarPerfil } from './perfil.js'; 
 
-// --- 2. EJECUCIÓN PRINCIPAL ---
+// ---  EJECUCIÓN PRINCIPAL ---
 document.addEventListener('DOMContentLoaded', () => {
   
   // --- Inicializa todos los módulos ---
   configurarBotonPerfil();
-  inicializarBuscador(); // <-- Ahora esto tiene el control total de la lupa
+  inicializarBuscador();
   inicializarCarrito();
   inicializarFiltros();
   inicializarContacto();
   inicializarRegistro();
   inicializarTabs();
+  inicializarLogin();
+  inicializarPerfil();
   
   // --- Lógica del Menú Móvil (Botón Hamburguesa) ---
   const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
@@ -35,4 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-}); // <-- Se cierra el 'DOMContentLoaded'
+}); 

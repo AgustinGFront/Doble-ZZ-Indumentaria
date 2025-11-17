@@ -1,10 +1,9 @@
-// js/carrito.js
 
-// --- VARIABLES GLOBALES (solo para este módulo) ---
+// --- VARIABLES GLOBALES (solo para este módulo) ---s
 let carrito = [];
 const KEY_LOCALSTORAGE = 'carritoDeCompras';
 
-// --- FUNCIÓN PRINCIPAL EXPORTABLE ---
+
 export function inicializarCarrito() {
 
   // --- SELECTORES DEL DOM ---
@@ -21,7 +20,7 @@ export function inicializarCarrito() {
     return; // No hacer nada
   }
 
-  // --- 2. LÓGICA DEL CARRITO (Funciones "privadas") ---
+  // LÓGICA DEL CARRITO  ---
 
   function agregarAlCarrito(e) {
     e.preventDefault();
@@ -50,7 +49,7 @@ export function inicializarCarrito() {
     mostrarModalCarrito();
   }
 
-  // --- ESTA ES LA FUNCIÓN MODIFICADA Y CORREGIDA ---
+  // 
   function renderizarCarrito() {
     if (!listaCarrito) {
         return; 
@@ -68,7 +67,7 @@ export function inicializarCarrito() {
         listaCarrito.appendChild(liVacio);
 
     } else {
-        // 2. Si hay items, los recorremos y renderizamos
+        // 2. Si hay items, los recorremos 
         carrito.forEach(item => {
             const subtotal = item.precio * item.cantidad;
             totalGeneral += subtotal; // <-- CÁLCULO TOTAL CORREGIDO
@@ -93,7 +92,6 @@ export function inicializarCarrito() {
                     </svg>
                 </button>
             `;
-            // --- FIN DE LA MODIFICACIÓN HTML ---
 
             listaCarrito.appendChild(li);
         });
@@ -124,7 +122,7 @@ export function inicializarCarrito() {
     guardarCarritoEnStorage();
   }
 
-  // --- 3. LOCALSTORAGE (Funciones "privadas") ---
+  // LOCALSTORAGE  ---
 
   function guardarCarritoEnStorage() {
     localStorage.setItem(KEY_LOCALSTORAGE, JSON.stringify(carrito));
@@ -137,7 +135,7 @@ export function inicializarCarrito() {
     }
   }
 
-  // --- 4. MANEJO DE EVENTOS (Funciones "privadas") ---
+  // MANEJO DE EVENTOS  ---
 
   function enlazarBotonesAgregar() {
     const botonesAgregar = document.querySelectorAll('.btn-agregar'); 
@@ -159,7 +157,7 @@ export function inicializarCarrito() {
     listaCarrito.addEventListener('click', eliminarItemDelCarrito);
   }
 
-  // --- 5. FUNCIONES DEL MODAL (Funciones "privadas") ---
+  // FUNCIONES DEL MODAL  ---
 
   function mostrarModalCarrito() {
     modalCarrito.classList.remove('hidden');
@@ -169,11 +167,11 @@ export function inicializarCarrito() {
     modalCarrito.classList.add('hidden');
   }
 
-  // --- INICIAR LA APLICACIÓN (Esto se ejecuta al final de inicializarCarrito) ---
+  //  INICIAR LA APLICACIÓN 
   
   cargarCarritoDesdeStorage();
   renderizarCarrito();
   enlazarBotonesAgregar();
   enlazarEventosInterfaz();
 
-} // <-- Aquí termina la función "inicializarCarrito"
+} 
