@@ -1,18 +1,17 @@
 // Firebase imports - usando CDN de Google
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"; 
 
-// Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBdQbiu0zcaxMEIhf7ght83QVfRZ5wd0W0", 
-  authDomain: "doble-zz-3685f.firebaseapp.com",
-  projectId: "doble-zz-3685f",
-  storageBucket: "doble-zz-3685f.firebasestorage.app",
-  messagingSenderId: "1020448708385",
-  appId: "1:1020448708385:web:62b5332f7a1c25321ed060",
-  measurementId: "G-47JM6X7NQN"
+   apiKey: "AIzaSyAeGaAsMzOgGK6_sNnadF__sPhZffdruVQ",
+    authDomain: "doble-zz.firebaseapp.com",
+    projectId: "doble-zz",
+    storageBucket: "doble-zz.firebasestorage.app",
+    messagingSenderId: "100271780635",
+    appId: "1:100271780635:web:d2a851a902fdc5d65a99be",
+    measurementId: "G-0NZCW0TJJQ"
 };
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

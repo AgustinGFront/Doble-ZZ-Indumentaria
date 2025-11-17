@@ -4,9 +4,6 @@
     "dev": "vite",
     "build": "chmod +x ./node_modules/.bin/vite && vite build"
   },
-  "dependencies": {
-    "firebase": "^12.5.0"
-  },
   "devDependencies": {
     "vite": "^7.2.2"
   }
